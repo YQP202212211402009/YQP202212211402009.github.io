@@ -1,0 +1,22 @@
+<hr>
+<p>#题目<br>Description<br>输入一个正整数 repeat (0&lt;repeat&lt;10)，做repeat 次下列运算：<br>输入四个整数，输出其中的最小值。</p>
+<p>Input</p>
+<blockquote>
+<p>见Sample</p>
+</blockquote>
+<p>Output</p>
+<blockquote>
+<p>见Sample</p>
+</blockquote>
+<p>Sample Input</p>
+<blockquote>
+<p>3<br>12 6 1 90<br>10 40 30 20<br>-1 -3 -4 -5</p>
+</blockquote>
+<p>Sample Output</p>
+<blockquote>
+<p>min is 1<br>min is 10<br>min is -5</p>
+</blockquote>
+<hr>
+<p>#代码<br>    #include&lt;stdio.h&gt;<br>    main()<br>    {<br>        int repeat,i,b,minz,min[4];<br>        int a[4];<br>        scanf(“%d”,&amp;repeat);<br>        if(repeat&lt;10&amp;&amp;repeat&gt;0)<br>        {	<br>            for(b&#x3D;0;b&lt;repeat;b++)<br>            {<br>                    for(i&#x3D;0;i&lt;4;i++)<br>                        {	<br>                        scanf(“%d”,&amp;a[i]);<br>                        }	<br>                    minz&#x3D;a[0];<br>                    for(i&#x3D;0;i&lt;4;i++)<br>                        {<br>                        if(a[i]&lt;&#x3D;minz)<br>                        minz&#x3D;a[i];<br>                        }	<br>                    min[b+1]&#x3D;minz;<br>            }<br>                for(i&#x3D;1;i&lt;&#x3D;3;i++)<br>                {<br>                printf(“min is %d\n”,min[i]);<br>                }<br>        }<br>    }</p>
+<hr>
+<p>本来也是想三个比来比去的，感觉不如直接整个排序一劳永逸了</p>

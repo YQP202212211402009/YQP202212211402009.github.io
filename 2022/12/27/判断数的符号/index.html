@@ -1,0 +1,25 @@
+<hr>
+<p>#题目<br>Description</p>
+<blockquote>
+<p>输入一个正整数 repeat (0&lt;repeat&lt;10)，做repeat 次下列运算：<br>输入整数 x，若x 大于0，y&#x3D;1；若x 等于0，y&#x3D;0；否则，y&#x3D;-1，最后输出y。</p>
+</blockquote>
+<p>Input</p>
+<blockquote>
+<p>见sample</p>
+</blockquote>
+<p>Output</p>
+<blockquote>
+<p>见sample</p>
+</blockquote>
+<p>Sample Input</p>
+<blockquote>
+<p>3<br>2 -8 0</p>
+</blockquote>
+<p>Sample Output</p>
+<blockquote>
+<p>1<br>-1<br>0</p>
+</blockquote>
+<hr>
+<p>#代码<br>    #include&lt;stdio.h&gt;<br>    main()<br>    {<br>        int x,y,repeat,i;<br>        scanf(“%d”,&amp;repeat);<br>        for(i&#x3D;0;i&lt;repeat;i++)<br>            {<br>            scanf(“%d”,&amp;x);	<br>            if(x&gt;0)<br>                y&#x3D;1;<br>            else if(x&lt;0)<br>                y&#x3D;-1;<br>            else<br>                y&#x3D;0;<br>            printf(“%d\n”,y);<br>            }<br>    }</p>
+<hr>
+<p>选择排序</p>

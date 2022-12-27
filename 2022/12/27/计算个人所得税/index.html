@@ -1,0 +1,15 @@
+<hr>
+<p>#题目<br>Description</p>
+<blockquote>
+<p>输入一个正整数 repeat (0&lt;repeat&lt;10)，做repeat 次下列运算：<br>输入一个职工的月薪 salary，输出应交的个人所得税tax(保留2 位小数)。<br>tax &#x3D; rate * (salary-850)<br>当 salary &lt;&#x3D; 850 时，rate &#x3D; 0;<br>当 850 &lt; salary &lt;&#x3D; 1350 时，rate &#x3D; 5;<br>当 1350 &lt; salary &lt;&#x3D; 2850 时，rate &#x3D; 10;<br>当 2850 &lt; salary &lt;&#x3D; 5850 时，rate &#x3D; 15;<br>当 5850 &lt; salary 时，rate &#x3D; 20;</p>
+</blockquote>
+<p>Sample Input</p>
+<blockquote>
+<p>2<br>200<br>2000<br>Sample Output<br>tax&#x3D;0.00<br>tax&#x3D;115.00</p>
+</blockquote>
+<p>HINT</p>
+<blockquote>
+<p>当结果为0时，你的程序可能输出的是 -0.00，请判断为0时，使用printf(“tax&#x3D;0.00\n”);</p>
+</blockquote>
+<hr>
+<p>#代码<br>    #include&lt;stdio.h&gt;<br>    main()<br>    {<br>    double tax;<br>    int b,rate,salary,i;<br>    scanf(“%d”,&amp;b);<br>        for(i&#x3D;0;i&lt;b;i++)<br>        {	<br>            scanf(“%d”,&amp;salary);<br>            if(salary&gt;5850)<br>            {<br>                rate&#x3D;20;<br>            }	<br>            else if(salary&gt;2850)<br>            {<br>                rate &#x3D; 15;<br>            }<br>            else if(salary&gt;1350)<br>            {<br>                rate&#x3D;10;<br>            }	<br>            else if(salary&gt;850)<br>            {<br>                rate&#x3D;5;	<br>            }<br>            else<br>            {<br>                rate&#x3D;0;<br>            }<br>            tax&#x3D;rate*(salary-850)*0.01;<br>            if(tax&#x3D;&#x3D;0)<br>            {<br>                printf(“tax&#x3D;0.00\n”);<br>            }		<br>            else<br>            {<br>                printf(“tax&#x3D;%.2lf\n”,tax);<br>            }<br>        }	<br>            return 0;<br>    }<br>用了好多个else if，感觉最容易忘记的地方就是else if实际上已经包含了上面条件的反向条件，经常忘掉</p>

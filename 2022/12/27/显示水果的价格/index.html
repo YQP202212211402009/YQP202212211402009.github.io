@@ -1,0 +1,15 @@
+<hr>
+<p>#题目<br>Description</p>
+<blockquote>
+<p>输入一个正整数 repeat (0&lt;repeat&lt;10)，做repeat 次下列运算：<br>以下 4 种水果的单价分别是3.00 元&#x2F;公斤，2.50 元&#x2F;公斤，4.10 元&#x2F;公斤，10.20 元&#x2F;公斤。<br>[1] apples<br>[2] pears<br>[3] oranges<br>[4] grapes<br>输入水果的编号，输出该水果的单价(保留2 位小数)。如果输入不正确的编号，显示单价为0.00。</p>
+</blockquote>
+<p>Sample Input</p>
+<blockquote>
+<p>1<br>3</p>
+</blockquote>
+<p>Sample Output</p>
+<blockquote>
+<p>price&#x3D;4.10</p>
+</blockquote>
+<hr>
+<p>#代码<br>    #include&lt;stdio.h&gt;<br>    main()<br>    {<br>    int a,b,i;<br>    double price;<br>    scanf(“%d”,&amp;b);<br>    for(i&#x3D;0;i&lt;b;i++)<br>        {<br>        scanf(“%d”,&amp;a);<br>        switch(a)<br>            {<br>            case 1:printf(“price&#x3D;3.00\n”);break;<br>            case 2:printf(“price&#x3D;2.50\n”);break;<br>            case 3:printf(“price&#x3D;4.10\n”);break;<br>            case 4:printf(“price&#x3D;10.20\n”);break;<br>            default:printf(“price&#x3D;0.00\n”);break;<br>            }<br>        }<br>    }<br>用上switch case函数了，属实人上人</p>

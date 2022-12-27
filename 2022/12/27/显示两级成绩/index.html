@@ -1,0 +1,9 @@
+<hr>
+<p>#题目<br>Description<br>输入一个正整数 repeat (0&lt;repeat&lt;10)，做repeat 次下列运算：<br>输入一个学生的数学成绩，如果它低于 60，输出“Fail”，否则，输出“Pass”。</p>
+<p>Input<br>见Sample</p>
+<p>Output<br>见Sample</p>
+<p>Sample Input<br>2<br>60 59<br>Sample Output<br>Pass<br>Fail</p>
+<hr>
+<p>#代码<br>    #include&lt;stdio.h&gt;<br>    int main()<br>    {<br>        int repeat,i,a;<br>        scanf(“%d”,&amp;repeat);<br>        if(repeat&lt;10&amp;&amp;repeat&gt;0)<br>        {<br>            for (i&#x3D;1;i&lt;&#x3D;repeat;i++)<br>            {<br>                scanf(“%d”,&amp;a);<br>                if(a&lt;60)		<br>                printf(“Fail\n”);<br>                else<br>                printf(“Pass\n”);	<br>            }<br>        }<br>    } </p>
+<hr>
+<p>选择结构刚刚开始</p>
