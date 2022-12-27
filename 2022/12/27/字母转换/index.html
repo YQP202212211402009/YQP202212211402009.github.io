@@ -1,0 +1,15 @@
+<hr>
+<p>#题目<br>Description</p>
+<blockquote>
+<p>输入一个正整数 repeat (0&lt;repeat&lt;10)，做repeat 次下列运算：<br>输入一个字符，如果它是大写字母，输出相应的小写字母；如果它是小写字母，输出相应的<br>大写字母；否则，原样输出。</p>
+</blockquote>
+<p>Sample Input</p>
+<blockquote>
+<p>3F&#x3D;y</p>
+</blockquote>
+<p>Sample Output</p>
+<blockquote>
+<p>f&#x3D;Y  </p>
+</blockquote>
+<hr>
+<p>#代码<br>    #include&lt;stdio.h&gt;<br>    main()<br>    {<br>    char a[3];<br>    int repeat,i,l;<br>    scanf(“%d”,&amp;repeat);<br>        for(l&#x3D;0;l&lt;repeat;l++)<br>        {	<br>            scanf(“%s”,&amp;a);<br>            for(i&#x3D;0;i&lt;&#x3D;3;i++)<br>            {<br>            if(a[i]&gt;&#x3D;’A’&amp;&amp;a[i]&lt;&#x3D;’Z’)<br>                a[i]&#x3D;a[i]+32;<br>            else if(a[i]&gt;&#x3D;’a’&amp;&amp;a[i]&lt;&#x3D;’z’)<br>                a[i]&#x3D;a[i]-32;<br>            else<br>                a[i]&#x3D;a[i];<br>            }<br>            printf(“%s”,a);<br>        }<br>    }<br>最后还是狼狈的用了数组</p>

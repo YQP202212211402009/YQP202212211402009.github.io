@@ -1,0 +1,15 @@
+<hr>
+<p>#题目<br>Description</p>
+<blockquote>
+<p>输入一个正整数 repeat (0&lt;repeat&lt;10)，做repeat 次下列运算：<br>读入 1 个正实数eps，计算并输出1－1&#x2F;3＋1&#x2F;5－1&#x2F;7＋⋯⋯，直到最后一项的绝对值小于eps(保留6 位小数，不包括最后一项)。</p>
+</blockquote>
+<p>Sample Input</p>
+<blockquote>
+<p>1<br>1E-4</p>
+</blockquote>
+<p>Sample Output</p>
+<blockquote>
+<p>0.785348</p>
+</blockquote>
+<hr>
+<p>#代码<br>    #include&lt;stdio.h&gt;<br>    int main(){<br>        int n,x,c,f;<br>        int a;<br>        int i&#x3D;1;<br>        scanf(“%d”,&amp;a);<br>        for(i&#x3D;1;i&lt;&#x3D;a;i++)<br>        {<br>            scanf(“%d %d”,&amp;n,&amp;x);<br>                printf(“Celsius Fahrenheit\n”);<br>            for(c&#x3D;n;c&lt;&#x3D;x;c++)<br>            {<br>                f&#x3D;32+c*9&#x2F;5;<br>                printf(“%d%10d\n”,c,f);<br>            }<br>        }<br>        return 0;<br>    }<br>多了个eps，比较一下</p>

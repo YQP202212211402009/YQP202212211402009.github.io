@@ -1,0 +1,15 @@
+<hr>
+<p>#题目<br>Description</p>
+<blockquote>
+<p>输入一个正整数 repeat (0&lt;repeat&lt;10)，做repeat 次下列运算：<br>读入 1 个正实数x 和1 个正整数 n(n&lt;&#x3D;10)，计算并输出x 的n 次幂（保留2 位小数）。</p>
+</blockquote>
+<p>Sample Input</p>
+<blockquote>
+<p>2<br>1.5 2<br>2.0 10</p>
+</blockquote>
+<p>Sample Output</p>
+<blockquote>
+<p>2.25<br>1024.00</p>
+</blockquote>
+<hr>
+<p>#代码<br>    #include&lt;stdio.h&gt;<br>    main()<br>    {<br>    double a,b;<br>    int repeat,n,i,l;<br>    scanf(“%d”,&amp;repeat);<br>    if(repeat&lt;10&amp;&amp;repeat&gt;0)<br>        {	<br>        for(l&#x3D;0;l&lt;repeat;l++)<br>            {			<br>            scanf(“%lf %d”,&amp;a,&amp;n);<br>                if(n&lt;&#x3D;10)<br>                {<br>                b&#x3D;a;<br>                for(i&#x3D;1;i&lt;n;i++)<br>                    a&#x3D;a*b;<br>                printf(“%.2lf\n”,a);<br>                }<br>            }<br>        }	<br>    }<br>小小累乘 可笑可笑</p>

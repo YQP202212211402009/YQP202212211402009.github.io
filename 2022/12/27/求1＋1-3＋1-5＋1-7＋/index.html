@@ -1,0 +1,15 @@
+<hr>
+<p>#题目<br>Description</p>
+<blockquote>
+<p>输入一个正整数 repeat (0&lt;repeat&lt;10)，做repeat 次下列运算：<br>读入 1 个正整数 n(n&lt;&#x3D;100)，计算并输出1＋1&#x2F;3＋1&#x2F;5＋1&#x2F;7＋⋯⋯的前n 项和(保留3 位小数)。</p>
+</blockquote>
+<p>Sample Input</p>
+<blockquote>
+<p>1<br>3</p>
+</blockquote>
+<p>Sample Output</p>
+<blockquote>
+<p>1.533</p>
+</blockquote>
+<hr>
+<p>#代码<br>    #include&lt;stdio.h&gt;<br>    main()<br>    {<br>    double sum&#x3D;0;<br>    int i&#x3D;1,n,a,l,x;<br>    scanf(“%d”,&amp;a);<br>    for(l&#x3D;1;l&lt;&#x3D;a;l++)<br>    {<br>        scanf(“%d”,&amp;n);<br>        if(n&lt;&#x3D;100)<br>        {<br>            while(x&lt;n)<br>            {<br>            sum&#x3D;sum+1.0&#x2F;i;<br>            i&#x3D;i+2;<br>            x&#x3D;x+1;<br>            }<br>        }<br>        printf(“%.3lf\n”,sum);<br>        sum&#x3D;0;<br>        i&#x3D;1;<br>        x&#x3D;0;<br>    }<br>    return 0;<br>    }<br>这一题和上一题挺像的，只不过不能用for循环的条件当做计算的变量了</p>

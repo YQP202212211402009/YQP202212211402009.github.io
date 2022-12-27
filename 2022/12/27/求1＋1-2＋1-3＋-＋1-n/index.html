@@ -1,0 +1,15 @@
+<hr>
+<p>#题目<br>Description</p>
+<blockquote>
+<p>输入一个正整数 repeat (0&lt;repeat&lt;10)，做repeat 次下列运算：<br>读入 1 个正整数 n(n&lt;&#x3D;50)，计算并输出1＋1&#x2F;2＋1&#x2F;3＋…＋1&#x2F;n (保留3 位小数)。</p>
+</blockquote>
+<p>Sample Input</p>
+<blockquote>
+<p>2<br>2<br>10</p>
+</blockquote>
+<p>Sample Output</p>
+<blockquote>
+<p>1.500<br>2.929</p>
+</blockquote>
+<hr>
+<p>#代码<br>    #include&lt;stdio.h&gt;<br>    main()<br>    {<br>    int n,repeat,i,b;<br>    double sum;<br>    scanf(“%d”,&amp;repeat);<br>            for(b&#x3D;0;b&lt;repeat;b++)<br>            {<br>                scanf(“%d”,&amp;n);<br>                for(i&#x3D;1;i&lt;&#x3D;n;i++)<br>                sum&#x3D;sum+1.0&#x2F;i;<br>                printf(“%.3lf\n”,sum);<br>                sum&#x3D;0;<br>            }<br>    }<br>累加 必须累加</p>

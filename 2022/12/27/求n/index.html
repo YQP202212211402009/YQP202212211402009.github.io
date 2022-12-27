@@ -1,0 +1,15 @@
+<hr>
+<p>#题目<br>Description</p>
+<blockquote>
+<p>输入一个正整数 repeat (0&lt;repeat&lt;10)，做repeat 次下列运算：<br>读入 1 个正整数 n (n&lt;&#x3D;22)，计算并输出 n! 。</p>
+</blockquote>
+<p>Sample Input</p>
+<blockquote>
+<p>3<br>1<br>10<br>5</p>
+</blockquote>
+<p>Sample Output</p>
+<blockquote>
+<p>1<br>3628800<br>120</p>
+</blockquote>
+<hr>
+<p>#代码<br>    #include&lt;stdio.h&gt;<br>    main()<br>    {<br>        int n,i,l,a;<br>        double sum&#x3D;1;<br>        scanf(“%d”,&amp;a);<br>        for(l&#x3D;0;l&lt;a;l++)<br>        {<br>            scanf(“%d”,&amp;n);<br>            if(n&lt;&#x3D;22)<br>            {<br>                for(i&#x3D;1;i&lt;&#x3D;n;i++)<br>                    sum&#x3D;sum*i;<br>                printf(“%.0lf\n”,sum);<br>                sum&#x3D;1;<br>            }<br>        }<br>    }<br>累乘 必须累乘，虽然现在可以用递归</p>
