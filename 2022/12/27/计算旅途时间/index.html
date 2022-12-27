@@ -1,0 +1,36 @@
+<pre><code>Description
+输入 2 个整数time1 和time2，表示火车的出发时间和到达时间，计算并输出旅途时间。
+有效的时间范围是 0000 到2359，不需要考虑出发时间晚于到达时间的情况。
+
+Input
+输入只有两个整数
+
+Output
+求出火车的旅途时间
+
+Sample Input
+712 1411
+Sample Output
+The train journey time is 6 hrs 59 mins.
+</code></pre>
+<hr>
+<p>代码如下</p>
+<hr>
+<pre><code>#include&lt;stdio.h&gt;
+main()
+&#123;
+    int time1,time2;
+    int h,j,k,l,sj1,sj2,sj3,sj4;
+    scanf(&quot;%d&quot;,&amp;time1);
+    scanf(&quot;%d&quot;,&amp;time2);
+    h=time1/100;
+    j=time2/100;
+    k=time1%100;
+    l=time2%100;
+    sj2=j*60+l;
+    sj1=h*60+k;
+    sj3=(sj2-sj1)/60;
+    sj4=(sj2-sj1)%60;
+    printf(&quot;The train journey time is %d hrs %d mins.&quot;,sj3,sj4);
+&#125;   
+</code></pre>

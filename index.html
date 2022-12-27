@@ -75,6 +75,162 @@
       <div class="outer">
         <section id="main">
   
+    <article id="-数字加密" class="h-entry article article-type-" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/12/27/%E6%95%B0%E5%AD%97%E5%8A%A0%E5%AF%86/" class="article-date">
+  <time class="dt-published" datetime="2022-12-27T12:10:18.000Z" itemprop="datePublished">2022-12-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/12/27/%E6%95%B0%E5%AD%97%E5%8A%A0%E5%AF%86/">1065:数字加密</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <hr>
+<p>Description<br>输入 1 个四位数，将其加密后输出。方法是将该数每一位上的数字加9，然后除以10 取余，<br>做为该位上的新数字，最后将第1 位和第3 位上的数字互换，第2 位和第4 位上的数字互<br>换，组成加密后的新数。</p>
+<p>Input<br>输入只有一个正整数</p>
+<p>Output<br>输出加密后的新数</p>
+<p>Sample Input<br>1257<br>Sample Output<br>The encrypted number is 4601  </p>
+<hr>
+<pre><code>#include &lt;stdio.h&gt;
+int main()
+&#123;
+    int number , temp,i =0 ,a[3];
+    scanf(&quot;%d&quot;,&amp;number);
+        while(i &lt; 4)
+            &#123;
+                while(number &gt; 0)
+                &#123;
+                temp = number% 10 ;
+                number = number /10 ;
+                a[i] =temp ;
+                i++ ;
+                &#125;
+
+            &#125;
+            for(i = 0 ; i&lt;4 ;i++)
+            &#123;
+                a[i] += 9 ;
+                a[i] = a[i] % 10 ;
+
+            &#125;
+            temp = a[0] ;
+            a[0] = a[2] ;
+            a[2] = temp ;
+            temp = a[1];
+            a[1] = a[3] ;
+            a[3] = temp ;
+            number = a[0]+ a[1]*10 + a[2]*100 + a[3]*1000 ;
+            printf(&quot;The encrypted number is %d&quot;,number);
+            return 0;
+&#125;
+</code></pre>
+<p>超级数组小子</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/12/27/%E6%95%B0%E5%AD%97%E5%8A%A0%E5%AF%86/" data-id="clc6ca1bg0003ug60ap0p9dkt" data-title="1065:数字加密" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/zcmu-oj/" rel="tag">zcmu oj</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="-计算旅途时间" class="h-entry article article-type-" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/12/27/%E8%AE%A1%E7%AE%97%E6%97%85%E9%80%94%E6%97%B6%E9%97%B4/" class="article-date">
+  <time class="dt-published" datetime="2022-12-27T12:02:43.000Z" itemprop="datePublished">2022-12-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/12/27/%E8%AE%A1%E7%AE%97%E6%97%85%E9%80%94%E6%97%B6%E9%97%B4/">1064:计算旅途时间</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <pre><code>Description
+输入 2 个整数time1 和time2，表示火车的出发时间和到达时间，计算并输出旅途时间。
+有效的时间范围是 0000 到2359，不需要考虑出发时间晚于到达时间的情况。
+
+Input
+输入只有两个整数
+
+Output
+求出火车的旅途时间
+
+Sample Input
+712 1411
+Sample Output
+The train journey time is 6 hrs 59 mins.
+</code></pre>
+<hr>
+<p>代码如下</p>
+<hr>
+<pre><code>#include&lt;stdio.h&gt;
+main()
+&#123;
+    int time1,time2;
+    int h,j,k,l,sj1,sj2,sj3,sj4;
+    scanf(&quot;%d&quot;,&amp;time1);
+    scanf(&quot;%d&quot;,&amp;time2);
+    h=time1/100;
+    j=time2/100;
+    k=time1%100;
+    l=time2%100;
+    sj2=j*60+l;
+    sj1=h*60+k;
+    sj3=(sj2-sj1)/60;
+    sj4=(sj2-sj1)%60;
+    printf(&quot;The train journey time is %d hrs %d mins.&quot;,sj3,sj4);
+&#125;   
+</code></pre>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/12/27/%E8%AE%A1%E7%AE%97%E6%97%85%E9%80%94%E6%97%B6%E9%97%B4/" data-id="clc6ca1bm000bug607k4z8pb2" data-title="1064:计算旅途时间" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/zcmu-oj/" rel="tag">zcmu oj</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="-华氏温度转换为摄氏温度" class="h-entry article article-type-" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/12/27/%E5%8D%8E%E6%B0%8F%E6%B8%A9%E5%BA%A6%E8%BD%AC%E6%8D%A2%E4%B8%BA%E6%91%84%E6%B0%8F%E6%B8%A9%E5%BA%A6/" class="article-date">
@@ -129,7 +285,7 @@ int main()
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/12/27/%E5%8D%8E%E6%B0%8F%E6%B8%A9%E5%BA%A6%E8%BD%AC%E6%8D%A2%E4%B8%BA%E6%91%84%E6%B0%8F%E6%B8%A9%E5%BA%A6/" data-id="clc65p3qs00085s60hx6y8zlk" data-title="1063:华氏温度转换为摄氏温度" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2022/12/27/%E5%8D%8E%E6%B0%8F%E6%B8%A9%E5%BA%A6%E8%BD%AC%E6%8D%A2%E4%B8%BA%E6%91%84%E6%B0%8F%E6%B8%A9%E5%BA%A6/" data-id="clc6ca1bb0000ug600m380odq" data-title="1063:华氏温度转换为摄氏温度" class="article-share-link">分享</a>
       
       
       
@@ -198,7 +354,7 @@ int main()
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/12/27/%E6%B1%82%E5%B9%B3%E6%96%B9%E6%A0%B9/" data-id="clc65p3n400025s601rko2oon" data-title="1062:求平方根" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2022/12/27/%E6%B1%82%E5%B9%B3%E6%96%B9%E6%A0%B9/" data-id="clc6ca1bl000aug60gocn2p8u" data-title="1062:求平方根" class="article-share-link">分享</a>
       
       
       
@@ -265,7 +421,7 @@ printf(&quot;The difference is %d&quot;,a-b);
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/12/27/%E6%B1%82%E4%B8%A4%E4%B8%AA%E6%95%B0%E7%9A%84%E5%92%8C%E4%B8%8E%E5%B7%AE/" data-id="clc65p3n200015s60fd50fs44" data-title="1061:求两个数的和与差" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2022/12/27/%E6%B1%82%E4%B8%A4%E4%B8%AA%E6%95%B0%E7%9A%84%E5%92%8C%E4%B8%8E%E5%B7%AE/" data-id="clc6ca1bh0004ug608plachpn" data-title="1061:求两个数的和与差" class="article-share-link">分享</a>
       
       
       
@@ -339,7 +495,7 @@ scanf(&quot;%d-%d-%d&quot;,&amp;sj1,&amp;sj2,&amp;sj3);
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/12/27/%E6%9A%91%E5%81%87%E4%BD%9C%E4%B8%9A/" data-id="clc65p3mw00005s60hjvcf3aj" data-title="暑假作业" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2022/12/27/%E6%9A%91%E5%81%87%E4%BD%9C%E4%B8%9A/" data-id="clc6ca1be0001ug60fqp6a4rb" data-title="暑假作业" class="article-share-link">分享</a>
       
       
       
@@ -399,7 +555,7 @@ scanf(&quot;%d-%d-%d&quot;,&amp;sj1,&amp;sj2,&amp;sj3);
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/12/27/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" data-id="clc65p3n700045s60ek5yhmwj" data-title="第一篇博客" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2022/12/27/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" data-id="clc6ca1bl0009ug60cmz9f915" data-title="第一篇博客" class="article-share-link">分享</a>
       
       
       
@@ -456,6 +612,14 @@ scanf(&quot;%d-%d-%d&quot;,&amp;sj1,&amp;sj2,&amp;sj3);
       <ul>
         
           <li>
+            <a href="/2022/12/27/%E6%95%B0%E5%AD%97%E5%8A%A0%E5%AF%86/">1065:数字加密</a>
+          </li>
+        
+          <li>
+            <a href="/2022/12/27/%E8%AE%A1%E7%AE%97%E6%97%85%E9%80%94%E6%97%B6%E9%97%B4/">1064:计算旅途时间</a>
+          </li>
+        
+          <li>
             <a href="/2022/12/27/%E5%8D%8E%E6%B0%8F%E6%B8%A9%E5%BA%A6%E8%BD%AC%E6%8D%A2%E4%B8%BA%E6%91%84%E6%B0%8F%E6%B8%A9%E5%BA%A6/">1063:华氏温度转换为摄氏温度</a>
           </li>
         
@@ -465,14 +629,6 @@ scanf(&quot;%d-%d-%d&quot;,&amp;sj1,&amp;sj2,&amp;sj3);
         
           <li>
             <a href="/2022/12/27/%E6%B1%82%E4%B8%A4%E4%B8%AA%E6%95%B0%E7%9A%84%E5%92%8C%E4%B8%8E%E5%B7%AE/">1061:求两个数的和与差</a>
-          </li>
-        
-          <li>
-            <a href="/2022/12/27/%E6%9A%91%E5%81%87%E4%BD%9C%E4%B8%9A/">暑假作业</a>
-          </li>
-        
-          <li>
-            <a href="/2022/12/27/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">第一篇博客</a>
           </li>
         
       </ul>
