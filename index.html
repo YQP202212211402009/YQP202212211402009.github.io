@@ -71,10 +71,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-第一篇" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-暑假作业" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2022/12/27/%E7%AC%AC%E4%B8%80%E7%AF%87/" class="article-date">
-  <time class="dt-published" datetime="2022-12-27T06:29:03.000Z" itemprop="datePublished">2022-12-27</time>
+    <a href="/2022/12/27/%E6%9A%91%E5%81%87%E4%BD%9C%E4%B8%9A/" class="article-date">
+  <time class="dt-published" datetime="2022-12-27T08:11:45.000Z" itemprop="datePublished">2022-12-27</time>
 </a>
     
   </div>
@@ -85,7 +85,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/12/27/%E7%AC%AC%E4%B8%80%E7%AF%87/">第一篇</a>
+      <a class="p-name article-title" href="/2022/12/27/%E6%9A%91%E5%81%87%E4%BD%9C%E4%B8%9A/">暑假作业</a>
     </h1>
   
 
@@ -93,11 +93,45 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        
+        <p>#来自录取通知书上的一个作业，题目的要求是写出现在日期与放假日期之间的时间  </p>
+<hr>
+<pre><code>#include&lt;stdio.h&gt;
+main()&#123;
+int fangjia,i=0;
+int sj1,sj2,sj3,rizi1; 
+int fj1,fj2,fj3,rizi2;
+int sum1=0,sum2=0,bs;
+int yue[]=&#123;0,31,28,31,30,31,30,31,31,30,31,30,31&#125;;
+printf(&quot;请输入当前日期：(格式xxxx-yy-zz) 如2008-1-2\n&quot;);
+scanf(&quot;%d-%d-%d&quot;,&amp;sj1,&amp;sj2,&amp;sj3);
+    while(i&lt;=sj2)&#123;
+        sum1=sum1+yue[i];
+        i++;
+    &#125;	
+    rizi1=sj1*365+sum1+sj3;
+    printf(&quot;请输入放假日期：(格式xxxx-yy-zz) 如2008-1-2\n&quot;);
+     scanf(&quot;%d-%d-%d&quot;,&amp;fj1,&amp;fj2,&amp;fj3);
+     i=0;
+     while(i&lt;=fj2)&#123;
+        sum2=sum2+yue[i];
+        i++;
+    &#125;		
+    rizi2=fj1*365+sum2+fj3;
+    bs=rizi2-rizi1;
+    if(bs&gt;0)
+        printf(&quot;距离快乐假期还有%d天\n&quot;,rizi2-rizi1);
+        else
+        printf(&quot;你这输的是甚么东西&quot;);
+    return 0;
+&#125; 
+</code></pre>
+<hr>
+<p>第一次写代码 还是非常生疏 调试了很多次.</p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/12/27/%E7%AC%AC%E4%B8%80%E7%AF%87/" data-id="clc5xzkl600023c60hcw8aebu" data-title="第一篇" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/12/27/%E6%9A%91%E5%81%87%E4%BD%9C%E4%B8%9A/" data-id="clc603ibk0000xo60e7jm4tlj" data-title="暑假作业" class="article-share-link">Share</a>
       
       
       
@@ -157,58 +191,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/12/27/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" data-id="clc5xzkl400013c60fq0m2wac" data-title="第一篇博客" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/12/20/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2022-12-20T11:24:41.719Z" itemprop="datePublished">2022-12-20</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/12/20/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/12/20/hello-world/" data-id="clc5xzkl100003c60bf756pru" data-title="Hello World" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/12/27/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" data-id="clc603ibp0001xo602o49cbj5" data-title="第一篇博客" class="article-share-link">Share</a>
       
       
       
@@ -251,15 +234,11 @@
       <ul>
         
           <li>
-            <a href="/2022/12/27/%E7%AC%AC%E4%B8%80%E7%AF%87/">第一篇</a>
+            <a href="/2022/12/27/%E6%9A%91%E5%81%87%E4%BD%9C%E4%B8%9A/">暑假作业</a>
           </li>
         
           <li>
             <a href="/2022/12/27/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">第一篇博客</a>
-          </li>
-        
-          <li>
-            <a href="/2022/12/20/hello-world/">Hello World</a>
           </li>
         
       </ul>
