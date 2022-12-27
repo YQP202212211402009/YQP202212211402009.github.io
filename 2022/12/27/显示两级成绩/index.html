@@ -4,6 +4,23 @@
 <p>Output<br>见Sample</p>
 <p>Sample Input<br>2<br>60 59<br>Sample Output<br>Pass<br>Fail</p>
 <hr>
-<p>#代码<br>    #include&lt;stdio.h&gt;<br>    int main()<br>    {<br>        int repeat,i,a;<br>        scanf(“%d”,&amp;repeat);<br>        if(repeat&lt;10&amp;&amp;repeat&gt;0)<br>        {<br>            for (i&#x3D;1;i&lt;&#x3D;repeat;i++)<br>            {<br>                scanf(“%d”,&amp;a);<br>                if(a&lt;60)		<br>                printf(“Fail\n”);<br>                else<br>                printf(“Pass\n”);	<br>            }<br>        }<br>    } </p>
+<pre><code>#include&lt;stdio.h&gt;
+int main()
+&#123;
+    int repeat,i,a;
+    scanf(&quot;%d&quot;,&amp;repeat);
+    if(repeat&lt;10&amp;&amp;repeat&gt;0)
+    &#123;
+        for (i=1;i&lt;=repeat;i++)
+        &#123;
+            scanf(&quot;%d&quot;,&amp;a);
+            if(a&lt;60)		
+            printf(&quot;Fail\n&quot;);
+            else
+            printf(&quot;Pass\n&quot;);	
+        &#125;
+    &#125;
+&#125; 
+</code></pre>
 <hr>
 <p>选择结构刚刚开始</p>

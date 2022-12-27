@@ -12,4 +12,20 @@
 <p>1.500<br>2.929</p>
 </blockquote>
 <hr>
-<p>#代码<br>    #include&lt;stdio.h&gt;<br>    main()<br>    {<br>    int n,repeat,i,b;<br>    double sum;<br>    scanf(“%d”,&amp;repeat);<br>            for(b&#x3D;0;b&lt;repeat;b++)<br>            {<br>                scanf(“%d”,&amp;n);<br>                for(i&#x3D;1;i&lt;&#x3D;n;i++)<br>                sum&#x3D;sum+1.0&#x2F;i;<br>                printf(“%.3lf\n”,sum);<br>                sum&#x3D;0;<br>            }<br>    }<br>累加 必须累加</p>
+<pre><code>#include&lt;stdio.h&gt;
+main()
+&#123;
+int n,repeat,i,b;
+double sum;
+scanf(&quot;%d&quot;,&amp;repeat);
+        for(b=0;b&lt;repeat;b++)
+        &#123;
+            scanf(&quot;%d&quot;,&amp;n);
+            for(i=1;i&lt;=n;i++)
+            sum=sum+1.0/i;
+            printf(&quot;%.3lf\n&quot;,sum);
+            sum=0;  
+        &#125;
+&#125;
+</code></pre>
+<p>累加 必须累加</p>

@@ -17,6 +17,34 @@
 <p>min is 1<br>min is 10<br>min is -5</p>
 </blockquote>
 <hr>
-<p>#代码<br>    #include&lt;stdio.h&gt;<br>    main()<br>    {<br>        int repeat,i,b,minz,min[4];<br>        int a[4];<br>        scanf(“%d”,&amp;repeat);<br>        if(repeat&lt;10&amp;&amp;repeat&gt;0)<br>        {	<br>            for(b&#x3D;0;b&lt;repeat;b++)<br>            {<br>                    for(i&#x3D;0;i&lt;4;i++)<br>                        {	<br>                        scanf(“%d”,&amp;a[i]);<br>                        }	<br>                    minz&#x3D;a[0];<br>                    for(i&#x3D;0;i&lt;4;i++)<br>                        {<br>                        if(a[i]&lt;&#x3D;minz)<br>                        minz&#x3D;a[i];<br>                        }	<br>                    min[b+1]&#x3D;minz;<br>            }<br>                for(i&#x3D;1;i&lt;&#x3D;3;i++)<br>                {<br>                printf(“min is %d\n”,min[i]);<br>                }<br>        }<br>    }</p>
+<pre><code>#include&lt;stdio.h&gt;
+main()
+&#123;
+    int repeat,i,b,minz,min[4];
+    int a[4];
+    scanf(&quot;%d&quot;,&amp;repeat);
+    if(repeat&lt;10&amp;&amp;repeat&gt;0)
+    &#123;	
+        for(b=0;b&lt;repeat;b++)
+        &#123;
+                for(i=0;i&lt;4;i++)
+                    &#123;	
+                    scanf(&quot;%d&quot;,&amp;a[i]);
+                    &#125;	
+                minz=a[0];
+                for(i=0;i&lt;4;i++)
+                    &#123;
+                    if(a[i]&lt;=minz)
+                    minz=a[i];
+                    &#125;	
+                min[b+1]=minz;
+        &#125;
+            for(i=1;i&lt;=3;i++)
+            &#123;
+            printf(&quot;min is %d\n&quot;,min[i]);
+            &#125;
+    &#125;
+&#125;
+</code></pre>
 <hr>
 <p>本来也是想三个比来比去的，感觉不如直接整个排序一劳永逸了</p>

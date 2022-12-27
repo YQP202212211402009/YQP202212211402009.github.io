@@ -111,8 +111,30 @@
 <p>11<br>116</p>
 </blockquote>
 <hr>
-<p>#代码<br>    #include &lt;stdio.h&gt;<br>    int main( )<br>    {<br>    int a&#x3D;1, sum&#x3D;0,repeat,l;<br>    scanf(“%d”, &amp;repeat) ;<br>    if(repeat&lt;10&amp;&amp;repeat&gt;0)<br>        {<br>        for(l&#x3D;1;l&lt;&#x3D;repeat;l++)<br>            {<br>            while (a&gt;0)<br>            {<br>            scanf(“%d”, &amp;a) ;<br>            if(a&lt;&#x3D;0)<br>                {<br>                a&#x3D;1;<br>                break;<br>                }	<br>            else if(a%2!&#x3D;0)<br>            sum&#x3D;sum+a ;<br>            }<br>            printf(“%d\n”,sum);<br>            sum&#x3D;0;</p>
-<pre><code>        &#125;
+<pre><code>#include &lt;stdio.h&gt;
+int main( )
+&#123;
+int a=1, sum=0,repeat,l;
+scanf(&quot;%d&quot;, &amp;repeat) ;
+if(repeat&lt;10&amp;&amp;repeat&gt;0)
+    &#123;
+    for(l=1;l&lt;=repeat;l++)
+        &#123;
+        while (a&gt;0)
+        &#123;
+        scanf(&quot;%d&quot;, &amp;a) ;
+        if(a&lt;=0)
+            &#123;
+            a=1;
+            break;
+            &#125;	
+        else if(a%2!=0)
+        sum=sum+a ;
+        &#125;
+        printf(&quot;%d\n&quot;,sum);
+        sum=0;
+        
+        &#125;
     &#125;
     return 0 ;	
 &#125;
@@ -121,7 +143,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/12/27/%E6%B1%82%E5%A5%87%E6%95%B0%E5%92%8C/" data-id="clc6djsr6000xsk609k6jdbxm" data-title="1081:求奇数和" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2022/12/27/%E6%B1%82%E5%A5%87%E6%95%B0%E5%92%8C/" data-id="clc6domyz000vu060f986852x" data-title="1081:求奇数和" class="article-share-link">分享</a>
       
       
       
@@ -171,12 +193,31 @@
 <p>0.785348</p>
 </blockquote>
 <hr>
-<p>#代码<br>    #include&lt;stdio.h&gt;<br>    int main(){<br>        int n,x,c,f;<br>        int a;<br>        int i&#x3D;1;<br>        scanf(“%d”,&amp;a);<br>        for(i&#x3D;1;i&lt;&#x3D;a;i++)<br>        {<br>            scanf(“%d %d”,&amp;n,&amp;x);<br>                printf(“Celsius Fahrenheit\n”);<br>            for(c&#x3D;n;c&lt;&#x3D;x;c++)<br>            {<br>                f&#x3D;32+c*9&#x2F;5;<br>                printf(“%d%10d\n”,c,f);<br>            }<br>        }<br>        return 0;<br>    }<br>多了个eps，比较一下</p>
+<pre><code>#include&lt;stdio.h&gt;
+int main()&#123;
+    int n,x,c,f;
+    int a;
+    int i=1;
+    scanf(&quot;%d&quot;,&amp;a);
+    for(i=1;i&lt;=a;i++)
+    &#123;
+        scanf(&quot;%d %d&quot;,&amp;n,&amp;x);
+            printf(&quot;Celsius Fahrenheit\n&quot;);
+        for(c=n;c&lt;=x;c++)
+        &#123;
+            f=32+c*9/5;
+            printf(&quot;%d%10d\n&quot;,c,f);
+        &#125;
+    &#125;
+    return 0;
+&#125;
+</code></pre>
+<p>多了个eps，比较一下</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/12/27/%E6%B1%821%EF%BC%8D1-3%EF%BC%8B1-5%EF%BC%8D1-7%EF%BC%8B/" data-id="clc6djsr4000nsk60fp9x3drv" data-title="1079:求1－1/3＋1/5－1/7＋..." class="article-share-link">分享</a>
+      <a data-url="http://example.com/2022/12/27/%E6%B1%821%EF%BC%8D1-3%EF%BC%8B1-5%EF%BC%8D1-7%EF%BC%8B/" data-id="clc6domyx000lu0609k09cc5j" data-title="1079:求1－1/3＋1/5－1/7＋..." class="article-share-link">分享</a>
       
       
       
@@ -226,12 +267,38 @@
 <p>1.533</p>
 </blockquote>
 <hr>
-<p>#代码<br>    #include&lt;stdio.h&gt;<br>    main()<br>    {<br>    double sum&#x3D;0;<br>    int i&#x3D;1,n,a,l,x;<br>    scanf(“%d”,&amp;a);<br>    for(l&#x3D;1;l&lt;&#x3D;a;l++)<br>    {<br>        scanf(“%d”,&amp;n);<br>        if(n&lt;&#x3D;100)<br>        {<br>            while(x&lt;n)<br>            {<br>            sum&#x3D;sum+1.0&#x2F;i;<br>            i&#x3D;i+2;<br>            x&#x3D;x+1;<br>            }<br>        }<br>        printf(“%.3lf\n”,sum);<br>        sum&#x3D;0;<br>        i&#x3D;1;<br>        x&#x3D;0;<br>    }<br>    return 0;<br>    }<br>这一题和上一题挺像的，只不过不能用for循环的条件当做计算的变量了</p>
+<pre><code>#include&lt;stdio.h&gt;
+main()
+&#123;
+double sum=0;
+int i=1,n,a,l,x;
+scanf(&quot;%d&quot;,&amp;a);
+for(l=1;l&lt;=a;l++)
+&#123;
+    scanf(&quot;%d&quot;,&amp;n);
+    if(n&lt;=100)
+    &#123;   
+        while(x&lt;n)
+        &#123;
+        sum=sum+1.0/i;
+        i=i+2;  
+        x=x+1;
+        &#125; 
+    &#125;
+    printf(&quot;%.3lf\n&quot;,sum);
+    sum=0;
+    i=1;
+    x=0;
+&#125;
+return 0;
+&#125;
+</code></pre>
+<p>这一题和上一题挺像的，只不过不能用for循环的条件当做计算的变量了</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/12/27/%E6%B1%821%EF%BC%8B1-3%EF%BC%8B1-5%EF%BC%8B1-7%EF%BC%8B/" data-id="clc6djsr3000jsk604p7uh3iz" data-title="1078:求1＋1/3＋1/5＋1/7＋..." class="article-share-link">分享</a>
+      <a data-url="http://example.com/2022/12/27/%E6%B1%821%EF%BC%8B1-3%EF%BC%8B1-5%EF%BC%8B1-7%EF%BC%8B/" data-id="clc6domyy000nu060hfst9325" data-title="1078:求1＋1/3＋1/5＋1/7＋..." class="article-share-link">分享</a>
       
       
       
@@ -277,12 +344,36 @@
 <p>1<br>3<br>Sample Output<br>0.833</p>
 </blockquote>
 <hr>
-<p>#代码<br>    #include&lt;stdio.h&gt;<br>    main()<br>    {<br>    double sum&#x3D;0;<br>    int i,n,a,l,x&#x3D;1;<br>    scanf(“%d”,&amp;a);<br>    for(i&#x3D;1;i&lt;&#x3D;a;i++)<br>    {<br>        scanf(“%d”,&amp;n);<br>        if(n&lt;&#x3D;100)<br>        {<br>            for(l&#x3D;1;l&lt;&#x3D;n;l++)<br>            {<br>                sum&#x3D;sum+(1.0&#x2F;l)*x;<br>                x&#x3D;-x;<br>            }<br>        }<br>        printf(“%.3lf\n”,sum);<br>        sum&#x3D;0;<br>        x&#x3D;1;<br>    }<br>    return 0;<br>    }<br>用了一个flag来控制正负，由于要多次输出sum所以每次输出完要重置sum还有flag</p>
+<pre><code>#include&lt;stdio.h&gt;
+main()
+&#123;
+double sum=0;
+int i,n,a,l,x=1;
+scanf(&quot;%d&quot;,&amp;a);
+for(i=1;i&lt;=a;i++)
+&#123;
+    scanf(&quot;%d&quot;,&amp;n);
+    if(n&lt;=100)
+    &#123;   
+        for(l=1;l&lt;=n;l++)
+        &#123;
+            sum=sum+(1.0/l)*x;
+            x=-x;
+        &#125;
+    &#125;
+    printf(&quot;%.3lf\n&quot;,sum);
+    sum=0;
+    x=1;
+&#125;
+return 0;
+&#125; 
+</code></pre>
+<p>用了一个flag来控制正负，由于要多次输出sum所以每次输出完要重置sum还有flag</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/12/27/%E6%B1%821%EF%BC%8D1-2%EF%BC%8B1-3%EF%BC%8D1-4%EF%BC%8B/" data-id="clc6djsr4000lsk609cnrgzjt" data-title="1077:求1－1/2＋1/3－1/4＋..." class="article-share-link">分享</a>
+      <a data-url="http://example.com/2022/12/27/%E6%B1%821%EF%BC%8D1-2%EF%BC%8B1-3%EF%BC%8D1-4%EF%BC%8B/" data-id="clc6domyx000ju06049qw9cg0" data-title="1077:求1－1/2＋1/3－1/4＋..." class="article-share-link">分享</a>
       
       
       
@@ -332,12 +423,34 @@
 <p>2.25<br>1024.00</p>
 </blockquote>
 <hr>
-<p>#代码<br>    #include&lt;stdio.h&gt;<br>    main()<br>    {<br>    double a,b;<br>    int repeat,n,i,l;<br>    scanf(“%d”,&amp;repeat);<br>    if(repeat&lt;10&amp;&amp;repeat&gt;0)<br>        {	<br>        for(l&#x3D;0;l&lt;repeat;l++)<br>            {			<br>            scanf(“%lf %d”,&amp;a,&amp;n);<br>                if(n&lt;&#x3D;10)<br>                {<br>                b&#x3D;a;<br>                for(i&#x3D;1;i&lt;n;i++)<br>                    a&#x3D;a*b;<br>                printf(“%.2lf\n”,a);<br>                }<br>            }<br>        }	<br>    }<br>小小累乘 可笑可笑</p>
+<pre><code>#include&lt;stdio.h&gt;
+main()
+&#123;
+double a,b;
+int repeat,n,i,l;
+scanf(&quot;%d&quot;,&amp;repeat);
+if(repeat&lt;10&amp;&amp;repeat&gt;0)
+    &#123;	
+    for(l=0;l&lt;repeat;l++)
+        &#123;			
+        scanf(&quot;%lf %d&quot;,&amp;a,&amp;n);
+            if(n&lt;=10)
+            &#123;
+            b=a;
+            for(i=1;i&lt;n;i++)
+                a=a*b;
+            printf(&quot;%.2lf\n&quot;,a);
+            &#125;
+        &#125;
+    &#125;	
+&#125;
+</code></pre>
+<p>小小累乘 可笑可笑</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/12/27/%E6%B1%82x%E7%9A%84n%E6%AC%A1%E5%B9%82/" data-id="clc6djsr4000psk60h7dxhc3u" data-title="1076:求x的n次幂" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2022/12/27/%E6%B1%82x%E7%9A%84n%E6%AC%A1%E5%B9%82/" data-id="clc6domyz000tu0600xhzbdt9" data-title="1076:求x的n次幂" class="article-share-link">分享</a>
       
       
       
@@ -387,12 +500,31 @@
 <p>1<br>3628800<br>120</p>
 </blockquote>
 <hr>
-<p>#代码<br>    #include&lt;stdio.h&gt;<br>    main()<br>    {<br>        int n,i,l,a;<br>        double sum&#x3D;1;<br>        scanf(“%d”,&amp;a);<br>        for(l&#x3D;0;l&lt;a;l++)<br>        {<br>            scanf(“%d”,&amp;n);<br>            if(n&lt;&#x3D;22)<br>            {<br>                for(i&#x3D;1;i&lt;&#x3D;n;i++)<br>                    sum&#x3D;sum*i;<br>                printf(“%.0lf\n”,sum);<br>                sum&#x3D;1;<br>            }<br>        }<br>    }<br>累乘 必须累乘，虽然现在可以用递归</p>
+<pre><code>#include&lt;stdio.h&gt;
+main()
+&#123;
+    int n,i,l,a;
+    double sum=1;
+    scanf(&quot;%d&quot;,&amp;a);
+    for(l=0;l&lt;a;l++)
+    &#123;
+        scanf(&quot;%d&quot;,&amp;n);
+        if(n&lt;=22)
+        &#123;
+            for(i=1;i&lt;=n;i++)
+                sum=sum*i;
+            printf(&quot;%.0lf\n&quot;,sum);
+            sum=1;
+        &#125; 
+    &#125;
+&#125;
+</code></pre>
+<p>累乘 必须累乘，虽然现在可以用递归</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/12/27/%E6%B1%82n/" data-id="clc6djsr5000tsk60bivh73ti" data-title="1075:求n!" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2022/12/27/%E6%B1%82n/" data-id="clc6domyy000pu060f4ewh33u" data-title="1075:求n!" class="article-share-link">分享</a>
       
       
       
@@ -442,12 +574,28 @@
 <p>1.500<br>2.929</p>
 </blockquote>
 <hr>
-<p>#代码<br>    #include&lt;stdio.h&gt;<br>    main()<br>    {<br>    int n,repeat,i,b;<br>    double sum;<br>    scanf(“%d”,&amp;repeat);<br>            for(b&#x3D;0;b&lt;repeat;b++)<br>            {<br>                scanf(“%d”,&amp;n);<br>                for(i&#x3D;1;i&lt;&#x3D;n;i++)<br>                sum&#x3D;sum+1.0&#x2F;i;<br>                printf(“%.3lf\n”,sum);<br>                sum&#x3D;0;<br>            }<br>    }<br>累加 必须累加</p>
+<pre><code>#include&lt;stdio.h&gt;
+main()
+&#123;
+int n,repeat,i,b;
+double sum;
+scanf(&quot;%d&quot;,&amp;repeat);
+        for(b=0;b&lt;repeat;b++)
+        &#123;
+            scanf(&quot;%d&quot;,&amp;n);
+            for(i=1;i&lt;=n;i++)
+            sum=sum+1.0/i;
+            printf(&quot;%.3lf\n&quot;,sum);
+            sum=0;  
+        &#125;
+&#125;
+</code></pre>
+<p>累加 必须累加</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/12/27/%E6%B1%821%EF%BC%8B1-2%EF%BC%8B1-3%EF%BC%8B-%EF%BC%8B1-n/" data-id="clc6djsr3000isk609yp55v1t" data-title="1074:求1＋1/2＋1/3＋...＋1/n" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2022/12/27/%E6%B1%821%EF%BC%8B1-2%EF%BC%8B1-3%EF%BC%8B-%EF%BC%8B1-n/" data-id="clc6domyw000hu060dxguf2sy" data-title="1074:求1＋1/2＋1/3＋...＋1/n" class="article-share-link">分享</a>
       
       
       
@@ -497,12 +645,34 @@
 <p>f&#x3D;Y  </p>
 </blockquote>
 <hr>
-<p>#代码<br>    #include&lt;stdio.h&gt;<br>    main()<br>    {<br>    char a[3];<br>    int repeat,i,l;<br>    scanf(“%d”,&amp;repeat);<br>        for(l&#x3D;0;l&lt;repeat;l++)<br>        {	<br>            scanf(“%s”,&amp;a);<br>            for(i&#x3D;0;i&lt;&#x3D;3;i++)<br>            {<br>            if(a[i]&gt;&#x3D;’A’&amp;&amp;a[i]&lt;&#x3D;’Z’)<br>                a[i]&#x3D;a[i]+32;<br>            else if(a[i]&gt;&#x3D;’a’&amp;&amp;a[i]&lt;&#x3D;’z’)<br>                a[i]&#x3D;a[i]-32;<br>            else<br>                a[i]&#x3D;a[i];<br>            }<br>            printf(“%s”,a);<br>        }<br>    }<br>最后还是狼狈的用了数组</p>
+<pre><code>#include&lt;stdio.h&gt;
+main()
+&#123;
+char a[3];
+int repeat,i,l;
+scanf(&quot;%d&quot;,&amp;repeat);
+    for(l=0;l&lt;repeat;l++)
+    &#123;	
+        scanf(&quot;%s&quot;,&amp;a);
+        for(i=0;i&lt;=3;i++)
+        &#123;
+        if(a[i]&gt;=&#39;A&#39;&amp;&amp;a[i]&lt;=&#39;Z&#39;)
+            a[i]=a[i]+32;
+        else if(a[i]&gt;=&#39;a&#39;&amp;&amp;a[i]&lt;=&#39;z&#39;)
+            a[i]=a[i]-32;
+        else 
+            a[i]=a[i];
+        &#125;
+        printf(&quot;%s&quot;,a);
+    &#125;
+&#125;
+</code></pre>
+<p>最后还是狼狈的用了数组</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/12/27/%E5%AD%97%E6%AF%8D%E8%BD%AC%E6%8D%A2/" data-id="clc6djsr1000bsk60hbqqfrk2" data-title="1073:字母转换" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2022/12/27/%E5%AD%97%E6%AF%8D%E8%BD%AC%E6%8D%A2/" data-id="clc6domys0005u060desq7l6i" data-title="1073:字母转换" class="article-share-link">分享</a>
       
       
       
@@ -552,12 +722,32 @@
 <p>price&#x3D;4.10</p>
 </blockquote>
 <hr>
-<p>#代码<br>    #include&lt;stdio.h&gt;<br>    main()<br>    {<br>    int a,b,i;<br>    double price;<br>    scanf(“%d”,&amp;b);<br>    for(i&#x3D;0;i&lt;b;i++)<br>        {<br>        scanf(“%d”,&amp;a);<br>        switch(a)<br>            {<br>            case 1:printf(“price&#x3D;3.00\n”);break;<br>            case 2:printf(“price&#x3D;2.50\n”);break;<br>            case 3:printf(“price&#x3D;4.10\n”);break;<br>            case 4:printf(“price&#x3D;10.20\n”);break;<br>            default:printf(“price&#x3D;0.00\n”);break;<br>            }<br>        }<br>    }<br>用上switch case函数了，属实人上人</p>
+<pre><code>#include&lt;stdio.h&gt;
+main()
+&#123;
+int a,b,i;
+double price;
+scanf(&quot;%d&quot;,&amp;b);
+for(i=0;i&lt;b;i++)
+    &#123;
+    scanf(&quot;%d&quot;,&amp;a);
+    switch(a)
+        &#123;
+        case 1:printf(&quot;price=3.00\n&quot;);break;
+        case 2:printf(&quot;price=2.50\n&quot;);break;
+        case 3:printf(&quot;price=4.10\n&quot;);break;
+        case 4:printf(&quot;price=10.20\n&quot;);break;
+        default:printf(&quot;price=0.00\n&quot;);break;
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+<p>用上switch case函数了，属实人上人</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/12/27/%E6%98%BE%E7%A4%BA%E6%B0%B4%E6%9E%9C%E7%9A%84%E4%BB%B7%E6%A0%BC/" data-id="clc6djsr2000fsk60f1yc2srm" data-title="1072:显示水果的价格" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2022/12/27/%E6%98%BE%E7%A4%BA%E6%B0%B4%E6%9E%9C%E7%9A%84%E4%BB%B7%E6%A0%BC/" data-id="clc6domyw000fu060515wgei4" data-title="1072:显示水果的价格" class="article-share-link">分享</a>
       
       
       
@@ -605,12 +795,54 @@
 <p>当结果为0时，你的程序可能输出的是 -0.00，请判断为0时，使用printf(“tax&#x3D;0.00\n”);</p>
 </blockquote>
 <hr>
-<p>#代码<br>    #include&lt;stdio.h&gt;<br>    main()<br>    {<br>    double tax;<br>    int b,rate,salary,i;<br>    scanf(“%d”,&amp;b);<br>        for(i&#x3D;0;i&lt;b;i++)<br>        {	<br>            scanf(“%d”,&amp;salary);<br>            if(salary&gt;5850)<br>            {<br>                rate&#x3D;20;<br>            }	<br>            else if(salary&gt;2850)<br>            {<br>                rate &#x3D; 15;<br>            }<br>            else if(salary&gt;1350)<br>            {<br>                rate&#x3D;10;<br>            }	<br>            else if(salary&gt;850)<br>            {<br>                rate&#x3D;5;	<br>            }<br>            else<br>            {<br>                rate&#x3D;0;<br>            }<br>            tax&#x3D;rate*(salary-850)*0.01;<br>            if(tax&#x3D;&#x3D;0)<br>            {<br>                printf(“tax&#x3D;0.00\n”);<br>            }		<br>            else<br>            {<br>                printf(“tax&#x3D;%.2lf\n”,tax);<br>            }<br>        }	<br>            return 0;<br>    }<br>用了好多个else if，感觉最容易忘记的地方就是else if实际上已经包含了上面条件的反向条件，经常忘掉</p>
+<pre><code>#include&lt;stdio.h&gt;
+main()
+&#123;
+double tax;
+int b,rate,salary,i;
+scanf(&quot;%d&quot;,&amp;b);
+    for(i=0;i&lt;b;i++)
+    &#123;	
+        scanf(&quot;%d&quot;,&amp;salary);
+        if(salary&gt;5850)
+        &#123;
+            rate=20;
+        &#125;	
+        else if(salary&gt;2850)
+        &#123;
+            rate = 15;
+        &#125;
+        else if(salary&gt;1350)
+        &#123;
+            rate=10;
+        &#125;	
+        else if(salary&gt;850)
+        &#123;
+            rate=5;	
+        &#125;
+        else
+        &#123;
+            rate=0;
+        &#125;
+        tax=rate*(salary-850)*0.01;
+        if(tax==0)
+        &#123;
+            printf(&quot;tax=0.00\n&quot;);
+        &#125;		
+        else
+        &#123;
+            printf(&quot;tax=%.2lf\n&quot;,tax);
+        &#125;
+    &#125;	
+        return 0;
+&#125; 
+</code></pre>
+<p>用了好多个else if，感觉最容易忘记的地方就是else if实际上已经包含了上面条件的反向条件，经常忘掉</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/12/27/%E8%AE%A1%E7%AE%97%E4%B8%AA%E4%BA%BA%E6%89%80%E5%BE%97%E7%A8%8E/" data-id="clc6djsr70012sk60235pdzjb" data-title="1071:计算个人所得税" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2022/12/27/%E8%AE%A1%E7%AE%97%E4%B8%AA%E4%BA%BA%E6%89%80%E5%BE%97%E7%A8%8E/" data-id="clc6domyz000xu060bhv61978" data-title="1071:计算个人所得税" class="article-share-link">分享</a>
       
       
       

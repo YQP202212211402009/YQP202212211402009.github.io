@@ -119,14 +119,31 @@
 <p>1<br>-1<br>0</p>
 </blockquote>
 <hr>
-<p>#代码<br>    #include&lt;stdio.h&gt;<br>    main()<br>    {<br>        int x,y,repeat,i;<br>        scanf(“%d”,&amp;repeat);<br>        for(i&#x3D;0;i&lt;repeat;i++)<br>            {<br>            scanf(“%d”,&amp;x);	<br>            if(x&gt;0)<br>                y&#x3D;1;<br>            else if(x&lt;0)<br>                y&#x3D;-1;<br>            else<br>                y&#x3D;0;<br>            printf(“%d\n”,y);<br>            }<br>    }</p>
+<pre><code>#include&lt;stdio.h&gt;
+main()
+&#123;
+    int x,y,repeat,i;
+    scanf(&quot;%d&quot;,&amp;repeat);
+    for(i=0;i&lt;repeat;i++)
+        &#123;
+        scanf(&quot;%d&quot;,&amp;x);	
+        if(x&gt;0)
+            y=1;
+        else if(x&lt;0)
+            y=-1;
+        else
+            y=0;
+        printf(&quot;%d\n&quot;,y);
+        &#125;
+&#125;
+</code></pre>
 <hr>
 <p>选择排序</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/12/27/%E5%88%A4%E6%96%AD%E6%95%B0%E7%9A%84%E7%AC%A6%E5%8F%B7/" data-id="clc6djsqr0000sk60e2qbaq8w" data-title="1070:判断数的符号" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2022/12/27/%E5%88%A4%E6%96%AD%E6%95%B0%E7%9A%84%E7%AC%A6%E5%8F%B7/" data-id="clc6domym0000u0601z379km8" data-title="1070:判断数的符号" class="article-share-link">分享</a>
       
       
       
@@ -181,14 +198,42 @@
 <p>min is 1<br>min is 10<br>min is -5</p>
 </blockquote>
 <hr>
-<p>#代码<br>    #include&lt;stdio.h&gt;<br>    main()<br>    {<br>        int repeat,i,b,minz,min[4];<br>        int a[4];<br>        scanf(“%d”,&amp;repeat);<br>        if(repeat&lt;10&amp;&amp;repeat&gt;0)<br>        {	<br>            for(b&#x3D;0;b&lt;repeat;b++)<br>            {<br>                    for(i&#x3D;0;i&lt;4;i++)<br>                        {	<br>                        scanf(“%d”,&amp;a[i]);<br>                        }	<br>                    minz&#x3D;a[0];<br>                    for(i&#x3D;0;i&lt;4;i++)<br>                        {<br>                        if(a[i]&lt;&#x3D;minz)<br>                        minz&#x3D;a[i];<br>                        }	<br>                    min[b+1]&#x3D;minz;<br>            }<br>                for(i&#x3D;1;i&lt;&#x3D;3;i++)<br>                {<br>                printf(“min is %d\n”,min[i]);<br>                }<br>        }<br>    }</p>
+<pre><code>#include&lt;stdio.h&gt;
+main()
+&#123;
+    int repeat,i,b,minz,min[4];
+    int a[4];
+    scanf(&quot;%d&quot;,&amp;repeat);
+    if(repeat&lt;10&amp;&amp;repeat&gt;0)
+    &#123;	
+        for(b=0;b&lt;repeat;b++)
+        &#123;
+                for(i=0;i&lt;4;i++)
+                    &#123;	
+                    scanf(&quot;%d&quot;,&amp;a[i]);
+                    &#125;	
+                minz=a[0];
+                for(i=0;i&lt;4;i++)
+                    &#123;
+                    if(a[i]&lt;=minz)
+                    minz=a[i];
+                    &#125;	
+                min[b+1]=minz;
+        &#125;
+            for(i=1;i&lt;=3;i++)
+            &#123;
+            printf(&quot;min is %d\n&quot;,min[i]);
+            &#125;
+    &#125;
+&#125;
+</code></pre>
 <hr>
 <p>本来也是想三个比来比去的，感觉不如直接整个排序一劳永逸了</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/12/27/%E6%89%BE%E6%9C%80%E5%B0%8F%E5%80%BC/" data-id="clc6djsqz0006sk602k45bsi9" data-title="1068:找最小值" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2022/12/27/%E6%89%BE%E6%9C%80%E5%B0%8F%E5%80%BC/" data-id="clc6domys0004u060hdnw8ewe" data-title="1068:找最小值" class="article-share-link">分享</a>
       
       
       
@@ -230,14 +275,31 @@
 <p>Output<br>见Sample</p>
 <p>Sample Input<br>2<br>60 59<br>Sample Output<br>Pass<br>Fail</p>
 <hr>
-<p>#代码<br>    #include&lt;stdio.h&gt;<br>    int main()<br>    {<br>        int repeat,i,a;<br>        scanf(“%d”,&amp;repeat);<br>        if(repeat&lt;10&amp;&amp;repeat&gt;0)<br>        {<br>            for (i&#x3D;1;i&lt;&#x3D;repeat;i++)<br>            {<br>                scanf(“%d”,&amp;a);<br>                if(a&lt;60)		<br>                printf(“Fail\n”);<br>                else<br>                printf(“Pass\n”);	<br>            }<br>        }<br>    } </p>
+<pre><code>#include&lt;stdio.h&gt;
+int main()
+&#123;
+    int repeat,i,a;
+    scanf(&quot;%d&quot;,&amp;repeat);
+    if(repeat&lt;10&amp;&amp;repeat&gt;0)
+    &#123;
+        for (i=1;i&lt;=repeat;i++)
+        &#123;
+            scanf(&quot;%d&quot;,&amp;a);
+            if(a&lt;60)		
+            printf(&quot;Fail\n&quot;);
+            else
+            printf(&quot;Pass\n&quot;);	
+        &#125;
+    &#125;
+&#125; 
+</code></pre>
 <hr>
 <p>选择结构刚刚开始</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/12/27/%E6%98%BE%E7%A4%BA%E4%B8%A4%E7%BA%A7%E6%88%90%E7%BB%A9/" data-id="clc6djsr1000dsk60613xda12" data-title="1067:显示两级成绩" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2022/12/27/%E6%98%BE%E7%A4%BA%E4%B8%A4%E7%BA%A7%E6%88%90%E7%BB%A9/" data-id="clc6domyu000au0606mjs525g" data-title="1067:显示两级成绩" class="article-share-link">分享</a>
       
       
       
@@ -294,7 +356,7 @@ main()
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/12/27/%E5%A4%A7%E5%86%99%E5%AD%97%E6%AF%8D%E8%BD%AC%E6%8D%A2%E6%88%90%E5%B0%8F%E5%86%99%E5%AD%97%E6%AF%8D/" data-id="clc6djsr00007sk600a8u4flg" data-title="1066:大写字母转换成小写字母" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2022/12/27/%E5%A4%A7%E5%86%99%E5%AD%97%E6%AF%8D%E8%BD%AC%E6%8D%A2%E6%88%90%E5%B0%8F%E5%86%99%E5%AD%97%E6%AF%8D/" data-id="clc6domyr0003u060aq8mcdgc" data-title="1066:大写字母转换成小写字母" class="article-share-link">分享</a>
       
       
       
@@ -374,7 +436,7 @@ int main()
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/12/27/%E6%95%B0%E5%AD%97%E5%8A%A0%E5%AF%86/" data-id="clc6djsr00009sk60dslb9ox0" data-title="1065:数字加密" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2022/12/27/%E6%95%B0%E5%AD%97%E5%8A%A0%E5%AF%86/" data-id="clc6domyu0008u060f7as027v" data-title="1065:数字加密" class="article-share-link">分享</a>
       
       
       
@@ -450,7 +512,7 @@ main()
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/12/27/%E8%AE%A1%E7%AE%97%E6%97%85%E9%80%94%E6%97%B6%E9%97%B4/" data-id="clc6djsr70011sk60a5wy3z0b" data-title="1064:计算旅途时间" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2022/12/27/%E8%AE%A1%E7%AE%97%E6%97%85%E9%80%94%E6%97%B6%E9%97%B4/" data-id="clc6domz00011u0601h6c6u8o" data-title="1064:计算旅途时间" class="article-share-link">分享</a>
       
       
       
@@ -518,7 +580,7 @@ int main()
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/12/27/%E5%8D%8E%E6%B0%8F%E6%B8%A9%E5%BA%A6%E8%BD%AC%E6%8D%A2%E4%B8%BA%E6%91%84%E6%B0%8F%E6%B8%A9%E5%BA%A6/" data-id="clc6djsqu0001sk604h95cz4d" data-title="1063:华氏温度转换为摄氏温度" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2022/12/27/%E5%8D%8E%E6%B0%8F%E6%B8%A9%E5%BA%A6%E8%BD%AC%E6%8D%A2%E4%B8%BA%E6%91%84%E6%B0%8F%E6%B8%A9%E5%BA%A6/" data-id="clc6domyp0001u0608r78eox9" data-title="1063:华氏温度转换为摄氏温度" class="article-share-link">分享</a>
       
       
       
@@ -587,7 +649,7 @@ int main()
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/12/27/%E6%B1%82%E5%B9%B3%E6%96%B9%E6%A0%B9/" data-id="clc6djsr6000vsk60dze3c53m" data-title="1062:求平方根" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2022/12/27/%E6%B1%82%E5%B9%B3%E6%96%B9%E6%A0%B9/" data-id="clc6domz0000zu0603w8e9e2j" data-title="1062:求平方根" class="article-share-link">分享</a>
       
       
       
@@ -654,7 +716,7 @@ printf(&quot;The difference is %d&quot;,a-b);
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/12/27/%E6%B1%82%E4%B8%A4%E4%B8%AA%E6%95%B0%E7%9A%84%E5%92%8C%E4%B8%8E%E5%B7%AE/" data-id="clc6djsr5000rsk604qda7gor" data-title="1061:求两个数的和与差" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2022/12/27/%E6%B1%82%E4%B8%A4%E4%B8%AA%E6%95%B0%E7%9A%84%E5%92%8C%E4%B8%8E%E5%B7%AE/" data-id="clc6domyy000ru0608brq5sh2" data-title="1061:求两个数的和与差" class="article-share-link">分享</a>
       
       
       
@@ -728,7 +790,7 @@ scanf(&quot;%d-%d-%d&quot;,&amp;sj1,&amp;sj2,&amp;sj3);
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/12/27/%E6%9A%91%E5%81%87%E4%BD%9C%E4%B8%9A/" data-id="clc6djsr2000hsk60bk0y9k0i" data-title="暑假作业" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2022/12/27/%E6%9A%91%E5%81%87%E4%BD%9C%E4%B8%9A/" data-id="clc6domyv000du060fls9e7hg" data-title="暑假作业" class="article-share-link">分享</a>
       
       
       

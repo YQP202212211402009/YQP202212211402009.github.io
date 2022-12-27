@@ -12,4 +12,24 @@
 <p>price&#x3D;4.10</p>
 </blockquote>
 <hr>
-<p>#代码<br>    #include&lt;stdio.h&gt;<br>    main()<br>    {<br>    int a,b,i;<br>    double price;<br>    scanf(“%d”,&amp;b);<br>    for(i&#x3D;0;i&lt;b;i++)<br>        {<br>        scanf(“%d”,&amp;a);<br>        switch(a)<br>            {<br>            case 1:printf(“price&#x3D;3.00\n”);break;<br>            case 2:printf(“price&#x3D;2.50\n”);break;<br>            case 3:printf(“price&#x3D;4.10\n”);break;<br>            case 4:printf(“price&#x3D;10.20\n”);break;<br>            default:printf(“price&#x3D;0.00\n”);break;<br>            }<br>        }<br>    }<br>用上switch case函数了，属实人上人</p>
+<pre><code>#include&lt;stdio.h&gt;
+main()
+&#123;
+int a,b,i;
+double price;
+scanf(&quot;%d&quot;,&amp;b);
+for(i=0;i&lt;b;i++)
+    &#123;
+    scanf(&quot;%d&quot;,&amp;a);
+    switch(a)
+        &#123;
+        case 1:printf(&quot;price=3.00\n&quot;);break;
+        case 2:printf(&quot;price=2.50\n&quot;);break;
+        case 3:printf(&quot;price=4.10\n&quot;);break;
+        case 4:printf(&quot;price=10.20\n&quot;);break;
+        default:printf(&quot;price=0.00\n&quot;);break;
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+<p>用上switch case函数了，属实人上人</p>

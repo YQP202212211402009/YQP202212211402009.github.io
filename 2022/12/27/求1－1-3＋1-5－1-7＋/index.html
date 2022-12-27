@@ -12,4 +12,23 @@
 <p>0.785348</p>
 </blockquote>
 <hr>
-<p>#代码<br>    #include&lt;stdio.h&gt;<br>    int main(){<br>        int n,x,c,f;<br>        int a;<br>        int i&#x3D;1;<br>        scanf(“%d”,&amp;a);<br>        for(i&#x3D;1;i&lt;&#x3D;a;i++)<br>        {<br>            scanf(“%d %d”,&amp;n,&amp;x);<br>                printf(“Celsius Fahrenheit\n”);<br>            for(c&#x3D;n;c&lt;&#x3D;x;c++)<br>            {<br>                f&#x3D;32+c*9&#x2F;5;<br>                printf(“%d%10d\n”,c,f);<br>            }<br>        }<br>        return 0;<br>    }<br>多了个eps，比较一下</p>
+<pre><code>#include&lt;stdio.h&gt;
+int main()&#123;
+    int n,x,c,f;
+    int a;
+    int i=1;
+    scanf(&quot;%d&quot;,&amp;a);
+    for(i=1;i&lt;=a;i++)
+    &#123;
+        scanf(&quot;%d %d&quot;,&amp;n,&amp;x);
+            printf(&quot;Celsius Fahrenheit\n&quot;);
+        for(c=n;c&lt;=x;c++)
+        &#123;
+            f=32+c*9/5;
+            printf(&quot;%d%10d\n&quot;,c,f);
+        &#125;
+    &#125;
+    return 0;
+&#125;
+</code></pre>
+<p>多了个eps，比较一下</p>

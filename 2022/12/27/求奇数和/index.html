@@ -12,8 +12,30 @@
 <p>11<br>116</p>
 </blockquote>
 <hr>
-<p>#代码<br>    #include &lt;stdio.h&gt;<br>    int main( )<br>    {<br>    int a&#x3D;1, sum&#x3D;0,repeat,l;<br>    scanf(“%d”, &amp;repeat) ;<br>    if(repeat&lt;10&amp;&amp;repeat&gt;0)<br>        {<br>        for(l&#x3D;1;l&lt;&#x3D;repeat;l++)<br>            {<br>            while (a&gt;0)<br>            {<br>            scanf(“%d”, &amp;a) ;<br>            if(a&lt;&#x3D;0)<br>                {<br>                a&#x3D;1;<br>                break;<br>                }	<br>            else if(a%2!&#x3D;0)<br>            sum&#x3D;sum+a ;<br>            }<br>            printf(“%d\n”,sum);<br>            sum&#x3D;0;</p>
-<pre><code>        &#125;
+<pre><code>#include &lt;stdio.h&gt;
+int main( )
+&#123;
+int a=1, sum=0,repeat,l;
+scanf(&quot;%d&quot;, &amp;repeat) ;
+if(repeat&lt;10&amp;&amp;repeat&gt;0)
+    &#123;
+    for(l=1;l&lt;=repeat;l++)
+        &#123;
+        while (a&gt;0)
+        &#123;
+        scanf(&quot;%d&quot;, &amp;a) ;
+        if(a&lt;=0)
+            &#123;
+            a=1;
+            break;
+            &#125;	
+        else if(a%2!=0)
+        sum=sum+a ;
+        &#125;
+        printf(&quot;%d\n&quot;,sum);
+        sum=0;
+        
+        &#125;
     &#125;
     return 0 ;	
 &#125;

@@ -12,4 +12,26 @@
 <p>2.25<br>1024.00</p>
 </blockquote>
 <hr>
-<p>#代码<br>    #include&lt;stdio.h&gt;<br>    main()<br>    {<br>    double a,b;<br>    int repeat,n,i,l;<br>    scanf(“%d”,&amp;repeat);<br>    if(repeat&lt;10&amp;&amp;repeat&gt;0)<br>        {	<br>        for(l&#x3D;0;l&lt;repeat;l++)<br>            {			<br>            scanf(“%lf %d”,&amp;a,&amp;n);<br>                if(n&lt;&#x3D;10)<br>                {<br>                b&#x3D;a;<br>                for(i&#x3D;1;i&lt;n;i++)<br>                    a&#x3D;a*b;<br>                printf(“%.2lf\n”,a);<br>                }<br>            }<br>        }	<br>    }<br>小小累乘 可笑可笑</p>
+<pre><code>#include&lt;stdio.h&gt;
+main()
+&#123;
+double a,b;
+int repeat,n,i,l;
+scanf(&quot;%d&quot;,&amp;repeat);
+if(repeat&lt;10&amp;&amp;repeat&gt;0)
+    &#123;	
+    for(l=0;l&lt;repeat;l++)
+        &#123;			
+        scanf(&quot;%lf %d&quot;,&amp;a,&amp;n);
+            if(n&lt;=10)
+            &#123;
+            b=a;
+            for(i=1;i&lt;n;i++)
+                a=a*b;
+            printf(&quot;%.2lf\n&quot;,a);
+            &#125;
+        &#125;
+    &#125;	
+&#125;
+</code></pre>
+<p>小小累乘 可笑可笑</p>

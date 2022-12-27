@@ -12,4 +12,23 @@
 <p>1<br>3628800<br>120</p>
 </blockquote>
 <hr>
-<p>#代码<br>    #include&lt;stdio.h&gt;<br>    main()<br>    {<br>        int n,i,l,a;<br>        double sum&#x3D;1;<br>        scanf(“%d”,&amp;a);<br>        for(l&#x3D;0;l&lt;a;l++)<br>        {<br>            scanf(“%d”,&amp;n);<br>            if(n&lt;&#x3D;22)<br>            {<br>                for(i&#x3D;1;i&lt;&#x3D;n;i++)<br>                    sum&#x3D;sum*i;<br>                printf(“%.0lf\n”,sum);<br>                sum&#x3D;1;<br>            }<br>        }<br>    }<br>累乘 必须累乘，虽然现在可以用递归</p>
+<pre><code>#include&lt;stdio.h&gt;
+main()
+&#123;
+    int n,i,l,a;
+    double sum=1;
+    scanf(&quot;%d&quot;,&amp;a);
+    for(l=0;l&lt;a;l++)
+    &#123;
+        scanf(&quot;%d&quot;,&amp;n);
+        if(n&lt;=22)
+        &#123;
+            for(i=1;i&lt;=n;i++)
+                sum=sum*i;
+            printf(&quot;%.0lf\n&quot;,sum);
+            sum=1;
+        &#125; 
+    &#125;
+&#125;
+</code></pre>
+<p>累乘 必须累乘，虽然现在可以用递归</p>

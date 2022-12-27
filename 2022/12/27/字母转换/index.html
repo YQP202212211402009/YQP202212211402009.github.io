@@ -12,4 +12,26 @@
 <p>f&#x3D;Y  </p>
 </blockquote>
 <hr>
-<p>#代码<br>    #include&lt;stdio.h&gt;<br>    main()<br>    {<br>    char a[3];<br>    int repeat,i,l;<br>    scanf(“%d”,&amp;repeat);<br>        for(l&#x3D;0;l&lt;repeat;l++)<br>        {	<br>            scanf(“%s”,&amp;a);<br>            for(i&#x3D;0;i&lt;&#x3D;3;i++)<br>            {<br>            if(a[i]&gt;&#x3D;’A’&amp;&amp;a[i]&lt;&#x3D;’Z’)<br>                a[i]&#x3D;a[i]+32;<br>            else if(a[i]&gt;&#x3D;’a’&amp;&amp;a[i]&lt;&#x3D;’z’)<br>                a[i]&#x3D;a[i]-32;<br>            else<br>                a[i]&#x3D;a[i];<br>            }<br>            printf(“%s”,a);<br>        }<br>    }<br>最后还是狼狈的用了数组</p>
+<pre><code>#include&lt;stdio.h&gt;
+main()
+&#123;
+char a[3];
+int repeat,i,l;
+scanf(&quot;%d&quot;,&amp;repeat);
+    for(l=0;l&lt;repeat;l++)
+    &#123;	
+        scanf(&quot;%s&quot;,&amp;a);
+        for(i=0;i&lt;=3;i++)
+        &#123;
+        if(a[i]&gt;=&#39;A&#39;&amp;&amp;a[i]&lt;=&#39;Z&#39;)
+            a[i]=a[i]+32;
+        else if(a[i]&gt;=&#39;a&#39;&amp;&amp;a[i]&lt;=&#39;z&#39;)
+            a[i]=a[i]-32;
+        else 
+            a[i]=a[i];
+        &#125;
+        printf(&quot;%s&quot;,a);
+    &#125;
+&#125;
+</code></pre>
+<p>最后还是狼狈的用了数组</p>
