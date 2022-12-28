@@ -75,6 +75,606 @@
       <div class="outer">
         <section id="main">
   
+    <article id="-出现次数超过一半的数" class="h-entry article article-type-" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/12/28/%E5%87%BA%E7%8E%B0%E6%AC%A1%E6%95%B0%E8%B6%85%E8%BF%87%E4%B8%80%E5%8D%8A%E7%9A%84%E6%95%B0/" class="article-date">
+  <time class="dt-published" datetime="2022-12-28T11:48:53.000Z" itemprop="datePublished">2022-12-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/12/28/%E5%87%BA%E7%8E%B0%E6%AC%A1%E6%95%B0%E8%B6%85%E8%BF%87%E4%B8%80%E5%8D%8A%E7%9A%84%E6%95%B0/">5213:出现次数超过一半的数</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <hr>
+<p>#题目<br>Description</p>
+<blockquote>
+<p>给出一个含有 n(0 &lt; n &lt;&#x3D; 1000) 个整数的数组，请找出其中出现次数超过一半的数。<br>数组中的数大于等于 -50 且小于等于 50。</p>
+</blockquote>
+<p>Input</p>
+<blockquote>
+<p>第一行包含一个整数 n，表示数组大小；<br>第二行包含 n 个整数，分别是数组中的每个元素，相邻两个元素之间用单个空格隔开。</p>
+</blockquote>
+<p>Output</p>
+<blockquote>
+<p>题目保证存在这样的数，输出这个数</p>
+</blockquote>
+<p>Sample Input</p>
+<blockquote>
+<p>3<br>1 2 2</p>
+</blockquote>
+<p>Sample Output</p>
+<blockquote>
+<p>2</p>
+</blockquote>
+<hr>
+<p>因为给的数是-50到50，我想到的是加个50变成0到100，看网上也有用两个数组的，分别搞-50 0和0 50。</p>
+<hr>
+<pre><code>#include&lt;stdio.h&gt;
+main()
+&#123;
+    int r,i,n,b;
+    int a[101];
+    for(i=0;i&lt;=100;i++)
+    &#123;
+        a[i]=0;
+    &#125;
+    scanf(&quot;%d&quot;,&amp;r);
+    for(i=1;i&lt;=r;i++)
+    &#123;
+        scanf(&quot;%d&quot;,&amp;b);			
+        a[b+50]=a[b+50]+1;			
+    &#125;
+    for(i=0;i&lt;=100;i++)
+    &#123;
+        if(r%2==0)
+        &#123;
+            if(a[i]&gt;r/2)
+            &#123;
+                printf(&quot;%d\n&quot;,i-50);
+            &#125;
+        &#125;
+        else
+        &#123;
+            if(a[i]&gt;=(r+1)/2)
+            &#123;
+                printf(&quot;%d\n&quot;,i-50);
+            &#125;
+        &#125;
+    &#125;
+    return 0;
+&#125;
+</code></pre>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/12/28/%E5%87%BA%E7%8E%B0%E6%AC%A1%E6%95%B0%E8%B6%85%E8%BF%87%E4%B8%80%E5%8D%8A%E7%9A%84%E6%95%B0/" data-id="clc7ljs6g0005bk60cmtwe57g" data-title="5213:出现次数超过一半的数" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/zcmu-oj/" rel="tag">zcmu oj</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="-输出一个整数的各位数字" class="h-entry article article-type-" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/12/28/%E8%BE%93%E5%87%BA%E4%B8%80%E4%B8%AA%E6%95%B4%E6%95%B0%E7%9A%84%E5%90%84%E4%BD%8D%E6%95%B0%E5%AD%97/" class="article-date">
+  <time class="dt-published" datetime="2022-12-28T11:46:01.000Z" itemprop="datePublished">2022-12-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/12/28/%E8%BE%93%E5%87%BA%E4%B8%80%E4%B8%AA%E6%95%B4%E6%95%B0%E7%9A%84%E5%90%84%E4%BD%8D%E6%95%B0%E5%AD%97/">1092:输出一个整数的各位数字</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <hr>
+<p>#题目<br>Description</p>
+<blockquote>
+<p>输入一个正整数 repeat (0&lt;repeat&lt;10)，做repeat 次下列运算：<br>输入一个整数，从高位开始逐位输出它的各位数字。</p>
+</blockquote>
+<p>Input</p>
+<blockquote>
+<p>输入的整数可能大于1030</p>
+</blockquote>
+<p>Output</p>
+<blockquote>
+<p>见sample</p>
+</blockquote>
+<p>Sample Input</p>
+<blockquote>
+<p>3<br>123456<br>-600<br>8</p>
+</blockquote>
+<p>Sample Output</p>
+<blockquote>
+<p>1 2 3 4 5 6<br>6 0 0<br>8</p>
+</blockquote>
+<hr>
+<p>给的数太大了，只能用字符串遍历了</p>
+<hr>
+<pre><code>#include&lt;stdio.h&gt;
+#include&lt;string.h&gt;
+main()
+&#123;
+int r,i,b,j,count=0;
+char a[1000];
+scanf(&quot;%d&quot;,&amp;r);
+for(i=1;i&lt;=r;i++)
+&#123;
+count=0;
+j=0;
+    scanf(&quot;%s&quot;,&amp;a);
+    b=strlen(a);
+    if(a[0]!=&#39;-&#39;)
+    &#123;
+        while(a[j]!=&#39;\0&#39;)
+        &#123;
+            if(count!=0)
+            &#123;
+                printf(&quot; &quot;);
+            &#125;
+            printf(&quot;%c&quot;,a[j]);
+            count++;
+            j++;
+        &#125;
+        printf(&quot;\n&quot;);
+    &#125;
+    else
+    &#123;
+        j++;
+        while(a[j]!=&#39;\0&#39;)
+        &#123;
+            if(count!=0)
+            &#123;
+                printf(&quot; &quot;);
+            &#125;
+            printf(&quot;%c&quot;,a[j]);
+            count++;
+            j++;
+        &#125;
+        printf(&quot;\n&quot;);
+    &#125;
+&#125;
+&#125; 
+</code></pre>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/12/28/%E8%BE%93%E5%87%BA%E4%B8%80%E4%B8%AA%E6%95%B4%E6%95%B0%E7%9A%84%E5%90%84%E4%BD%8D%E6%95%B0%E5%AD%97/" data-id="clc7ljs6t001dbk609x1hh1ay" data-title="1092:输出一个整数的各位数字" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/zcmu-oj/" rel="tag">zcmu oj</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-判断三角形形状" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/12/28/%E5%88%A4%E6%96%AD%E4%B8%89%E8%A7%92%E5%BD%A2%E5%BD%A2%E7%8A%B6/" class="article-date">
+  <time class="dt-published" datetime="2022-12-28T11:43:38.000Z" itemprop="datePublished">2022-12-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/12/28/%E5%88%A4%E6%96%AD%E4%B8%89%E8%A7%92%E5%BD%A2%E5%BD%A2%E7%8A%B6/">判断三角形形状</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <hr>
+<p>#题目<br>Description</p>
+<blockquote>
+<p>读入三角形的三条边，进行如下的判断：<br>如果输入值不合法，输出illegal triangle，表示三角形不合法<br>如果输入值合法，两条较短边的平方和大于最长边的平方，则输出acute triangle，表示锐角三角形<br>如果输入值合法，两条较短边的平方和等于最长边的平方，则输出right triangle，表示直角三角形<br>如果输入值合法，两条较短边的平方和小于最长边的平方，则输出obtuse triangle，表示钝角三角形<br>如果任意两条边的和 大于 第三边，那么输入的三角形就是合法的。</p>
+</blockquote>
+<p>Input</p>
+<blockquote>
+<p>读入三个整数 a,b,c(1 &lt;&#x3D; a,b,c &lt;&#x3D; 100)，表示三角形的三条边。</p>
+</blockquote>
+<p>Output</p>
+<blockquote>
+<p>根据情况输出illegal triangle、acute triangle、right triangle、obtuse triangle中的一种。</p>
+</blockquote>
+<p>Sample Input</p>
+<blockquote>
+<p>3 4 5</p>
+</blockquote>
+<p>Sample Output</p>
+<blockquote>
+<p>right triangle</p>
+</blockquote>
+<hr>
+<p>三个数也要排序，割鸡焉用牛刀啊！</p>
+<hr>
+<pre><code>#include&lt;stdio.h&gt;
+#include&lt;math.h&gt;
+main()
+&#123;
+    int a[3]=&#123;0&#125;;
+    int b,t,i,min;
+    for(i=0;i&lt;3;i++)
+    &#123;
+        scanf(&quot;%d&quot;,&amp;a[i]);
+    &#125;
+    for(i=0;i&lt;2;i++)
+    &#123;
+        min=i;
+        for(b=i+1;b&lt;3;b++)
+        &#123;
+            if(a[b]&lt;a[min])
+            &#123;
+                min=b;
+            &#125;
+        &#125;
+        t=a[i];
+        a[i]=a[min];
+        a[min]=t;
+    &#125;
+    if((a[0]+a[1]&gt;a[2]) || (a[1]+a[2]&gt;a[0]) || (a[0]+a[2]&gt;a[1]))
+    &#123;
+        if(pow(a[0],2)+pow(a[1],2)&gt;pow(a[2],2))
+        &#123;
+            printf(&quot;acute triangle\n&quot;);
+        &#125;
+        else if(pow(a[0],2)+pow(a[1],2)==pow(a[2],2))
+        &#123;
+            printf(&quot;right triangle\n&quot;);
+        &#125;
+        else
+        &#123;
+            printf(&quot;obtuse triangle\n&quot;);
+        &#125;
+    &#125;
+    else 
+    &#123;
+        printf(&quot;illegal triangle\n&quot;);
+    &#125;
+    return 0;
+&#125;
+</code></pre>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/12/28/%E5%88%A4%E6%96%AD%E4%B8%89%E8%A7%92%E5%BD%A2%E5%BD%A2%E7%8A%B6/" data-id="clc7ljs6d0001bk600wsxa6qk" data-title="判断三角形形状" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/zcmu-oj/" rel="tag">zcmu oj</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-求余" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/12/28/%E6%B1%82%E4%BD%99/" class="article-date">
+  <time class="dt-published" datetime="2022-12-28T11:41:32.000Z" itemprop="datePublished">2022-12-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/12/28/%E6%B1%82%E4%BD%99/">求余</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <hr>
+<p>#题目<br>Description</p>
+<blockquote>
+<p>小学题目，给定除数和被除数，求余数</p>
+</blockquote>
+<p>Input</p>
+<blockquote>
+<p>多组测试数据,每组测试数据包含两个整数n,k(1&lt;&#x3D;n&lt;&#x3D;10^2000,1&lt;&#x3D;k&lt;&#x3D;1000)</p>
+</blockquote>
+<p>Output<br>?对于每组测试数据,输出n%k</p>
+<p>Sample Input</p>
+<blockquote>
+<p>12 4<br>12 5</p>
+</blockquote>
+<p>Sample Output</p>
+<blockquote>
+<p>0<br>2</p>
+</blockquote>
+<hr>
+<p>说是小学题目 哥们没写出来</p>
+<hr>
+<pre><code>#include&lt;stdio.h&gt;
+#include&lt;string.h&gt;
+main()
+&#123;
+    int sum=0;
+    char a[2001];
+    int k,i;
+    scanf(&quot;%s %d&quot;,&amp;a,&amp;k);
+    sum=a[0]-&#39;0&#39;;
+    for(i=1;i&lt;strlen(a);i++)
+    &#123;
+        if(sum&lt;k)
+        &#123;
+            sum=sum*10+(a[i]-&#39;0&#39;);
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+<p>这样子真的很简洁有力，就是想不到 </p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/12/28/%E6%B1%82%E4%BD%99/" data-id="clc7ljs6r0014bk60f6ih3vj5" data-title="求余" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/zcmu-oj/" rel="tag">zcmu oj</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-E-当然是选择原谅你" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/12/28/E-%E5%BD%93%E7%84%B6%E6%98%AF%E9%80%89%E6%8B%A9%E5%8E%9F%E8%B0%85%E4%BD%A0/" class="article-date">
+  <time class="dt-published" datetime="2022-12-28T11:39:49.000Z" itemprop="datePublished">2022-12-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/12/28/E-%E5%BD%93%E7%84%B6%E6%98%AF%E9%80%89%E6%8B%A9%E5%8E%9F%E8%B0%85%E4%BD%A0/">E.当然是选择原谅你</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <hr>
+<p>#题目<br>Description</p>
+<blockquote>
+<p>最近HX无所事事，他的脑海里出现了一个想法。这个游戏盘的大小是n*m。首先，硬币放在右上角（1，m）。 每次有人可以将硬币移动到左边，下面或左下方的空白处。不能移动的人将失去游戏。 HX只能无聊到找XH玩了。游戏总是从HX开始。 如果两人都玩得很好，谁能赢得比赛呢？</p>
+</blockquote>
+<p>Input</p>
+<blockquote>
+<p>多组输入，直到输入0 0结束。<br>输入n和m（1 ≤ n ≤ 10^6）表示游戏盘的长与宽。</p>
+</blockquote>
+<p>Output</p>
+<blockquote>
+<p>如果HX赢则输出H，否则输出X。</p>
+</blockquote>
+<p>Sample Input</p>
+<blockquote>
+<p>5 3<br>5 4<br>0 0</p>
+</blockquote>
+<p>Sample Output</p>
+<blockquote>
+<p>X<br>H</p>
+</blockquote>
+<hr>
+<p>只能说，慢慢演算求规律</p>
+<hr>
+<pre><code>#include&lt;stdio.h&gt;
+main()
+&#123;
+    int n,m;
+    scanf(&quot;%d %d&quot;,&amp;n,&amp;m);
+    while(n!=0 || m!=0)
+    &#123;
+        if(m%2==0 || n%2==0)
+        &#123;
+            printf(&quot;H\n&quot;);
+        &#125;
+        else
+        &#123;
+            printf(&quot;X\n&quot;);
+        &#125;
+        scanf(&quot;%d %d&quot;,&amp;n,&amp;m);
+    &#125;
+    return 0;
+&#125; 
+</code></pre>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/12/28/E-%E5%BD%93%E7%84%B6%E6%98%AF%E9%80%89%E6%8B%A9%E5%8E%9F%E8%B0%85%E4%BD%A0/" data-id="clc7ljs6a0000bk607k2tcar6" data-title="E.当然是选择原谅你" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/zcmu-oj/" rel="tag">zcmu oj</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-不存在的泳池" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/12/28/%E4%B8%8D%E5%AD%98%E5%9C%A8%E7%9A%84%E6%B3%B3%E6%B1%A0/" class="article-date">
+  <time class="dt-published" datetime="2022-12-28T11:33:48.000Z" itemprop="datePublished">2022-12-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/12/28/%E4%B8%8D%E5%AD%98%E5%9C%A8%E7%9A%84%E6%B3%B3%E6%B1%A0/">不存在的泳池</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <hr>
+<p>#题目<br>Description</p>
+<blockquote>
+<p>小w是云南中医学院的同学，有一天他看到了学校的百度百科介绍：<br>截止到2014年5月，云南中医学院图书馆纸本藏书74.8457万册，纸质期刊388种，馆藏线装古籍图书1.8万册，电子资源总量35TB，拥有中、外文数据库25个，电子图书29.5万册（镜像）、包库130万册。古籍线装图书1.8万余册，有39种列为本馆珍善本，如《彻滕八编》、《赵氏医贯》等明清版本、台湾文渊阁版本《四库全书》，按《全国古籍善本书总目》分类表（即：经·史·子·集四部分类）部编列、上架、供读者使用。<br>显然学校图书馆的占地面积非常大，于是他开始想象…..如果他有一个跟图书馆一样大的游泳池？！<br>如果有一个那么大的游泳池，他就可以邀请女神一起去游泳…<br>如果有一个那么大的游泳池，他还可以划开一半出租，收取门票费赚钱…这样等赚了一些钱之后，就招一些游泳教练来，然后对外招生，招收学生继续赚更多的钱！<br>如果有一个那么大的游泳池，他还能把泳池里的水全部放光…开一个吕子乔心目中最大最棒的泳池派对！<br>…….<br>等有了更多的钱，就可以在第一个泳池旁边再建一个一样大的泳池……<br>小w一边流口水一边想自己的未来，一想到女神看到自己事业有成，靠一个游泳池白手起家发家致富，对自己投怀送抱，高兴的根本合不拢嘴。<br>这时候旁边的小q作为小w的室友，随口提了一句：“这么大的泳池，你怎么换水？”<br>显然小w是个有原则的人，他不会让自己的泳池像不法商家一样不换水，用不干净的水给别人使用或者给自己使用。<br>小w百度了之后发现…淘宝里有一家店卖一种一次性抽水机，这种一次性抽水机很神奇，它有两个按钮：<br>1.如果泳池里的水（立方米）是3的倍数，那么可以按第一个按钮让它抽走泳池里三分之二的水<br>2.如果泳池里的水（立方米）是2的倍数，那么可以按第二个按钮让它抽走泳池里二分之一的水<br>小w虽然是个有原则的人，但是作为一个商人，他需要节省钱…而且他现在有两个泳池….但是显然这种抽水机不能把水抽光，水越少，性价比就越低。<br>但是两个泳池建在一起，如果两个泳池的水面不一样高，那么小w会很不开心，所以他想用这种抽水机，把两个泳池里的水抽成一样多。然后再考虑别的….当然在保证能把两个泳池里的水抽成一样多的情况下..他希望花的钱最少…<br>（不管了！好看最重要，好看才能吸引顾客啊！先好看！再考虑怎么换水吧）</p>
+</blockquote>
+<p>Input</p>
+<blockquote>
+<p>多组测试数据，给出A,B表示两个泳池当前的水量(立方米)<br>（1&lt;&#x3D;A,B&lt;&#x3D;10^9）</p>
+</blockquote>
+<p>Output</p>
+<blockquote>
+<p>每组测试数据输出一个整数表示至少需要买多少个一次性抽水机，若买多少个都不能让泳池的水相等，则输出”-1”</p>
+</blockquote>
+<p>Sample Input</p>
+<blockquote>
+<p>5 20<br>14 8<br>6 6</p>
+</blockquote>
+<p>Sample Output</p>
+<blockquote>
+<p>2<br>-1<br>0</p>
+</blockquote>
+<p>HINT</p>
+<blockquote>
+<p>显然这一切都是他的YY，他怎么可能会有游泳池？？？  </p>
+</blockquote>
+<p>真行写个题目还给个故事看看，这是今天考试的题目，但是才疏学浅没写出来。 </p>
+<hr>
+<p>两个数他们要是都分别一直除2，除3，要是他们最后能相等那么一定是会等于他们的最大公因数（我不懂规矩我哥们说的，我先写看看以后能不能懂。</p>
+<hr>
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+int gcd(int x,int y)
+&#123;
+    return y==0?x:gcd(y,x%y);
+&#125;
+int main()
+&#123;
+    int a,b;
+    while(~scanf(&quot;%d %d&quot;,&amp;a,&amp;b))
+    &#123;
+        if(a==b)
+        &#123;
+            printf(&quot;0\n&quot;);
+            continue;
+        &#125;
+        int t=gcd(a,b);
+        int s=0;
+        a=a/t;b=b/t;
+        while(a%2==0)
+        &#123;
+            a/=2;
+            s++;
+        &#125;
+        while(a%3==0)
+        &#123;
+            a/=3;
+            s++;
+        &#125;
+        while(b%2==0)
+        &#123;
+            b/=2;
+            s++;
+        &#125;
+        while(b%3==0)
+        &#123;
+            b/=3;
+            s++;
+        &#125;
+        if(a==b)
+            printf(&quot;%d\n&quot;,s);
+        else
+            printf(&quot;-1\n&quot;);
+    &#125;
+    return 0;
+&#125;  
+</code></pre>
+<p>不过倒是学到了怎么用递归求公因数</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/12/28/%E4%B8%8D%E5%AD%98%E5%9C%A8%E7%9A%84%E6%B3%B3%E6%B1%A0/" data-id="clc7ljs6f0003bk608dakc7xs" data-title="不存在的泳池" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/zcmu-oj/" rel="tag">zcmu oj</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="-求奇数和" class="h-entry article article-type-" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/12/27/%E6%B1%82%E5%A5%87%E6%95%B0%E5%92%8C/" class="article-date">
@@ -143,7 +743,7 @@ if(repeat&lt;10&amp;&amp;repeat&gt;0)
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/12/27/%E6%B1%82%E5%A5%87%E6%95%B0%E5%92%8C/" data-id="clc6domyz000vu060f986852x" data-title="1081:求奇数和" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2022/12/27/%E6%B1%82%E5%A5%87%E6%95%B0%E5%92%8C/" data-id="clc7ljs6s0016bk60g26eg9tx" data-title="1081:求奇数和" class="article-share-link">分享</a>
       
       
       
@@ -217,7 +817,7 @@ int main()&#123;
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/12/27/%E6%B1%821%EF%BC%8D1-3%EF%BC%8B1-5%EF%BC%8D1-7%EF%BC%8B/" data-id="clc6domyx000lu0609k09cc5j" data-title="1079:求1－1/3＋1/5－1/7＋..." class="article-share-link">分享</a>
+      <a data-url="http://example.com/2022/12/27/%E6%B1%821%EF%BC%8D1-3%EF%BC%8B1-5%EF%BC%8D1-7%EF%BC%8B/" data-id="clc7ljs6p000ubk600n1q48gl" data-title="1079:求1－1/3＋1/5－1/7＋..." class="article-share-link">分享</a>
       
       
       
@@ -298,7 +898,7 @@ return 0;
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/12/27/%E6%B1%821%EF%BC%8B1-3%EF%BC%8B1-5%EF%BC%8B1-7%EF%BC%8B/" data-id="clc6domyy000nu060hfst9325" data-title="1078:求1＋1/3＋1/5＋1/7＋..." class="article-share-link">分享</a>
+      <a data-url="http://example.com/2022/12/27/%E6%B1%821%EF%BC%8B1-3%EF%BC%8B1-5%EF%BC%8B1-7%EF%BC%8B/" data-id="clc7ljs6p000rbk60a6om7tum" data-title="1078:求1＋1/3＋1/5＋1/7＋..." class="article-share-link">分享</a>
       
       
       
@@ -373,476 +973,7 @@ return 0;
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/12/27/%E6%B1%821%EF%BC%8D1-2%EF%BC%8B1-3%EF%BC%8D1-4%EF%BC%8B/" data-id="clc6domyx000ju06049qw9cg0" data-title="1077:求1－1/2＋1/3－1/4＋..." class="article-share-link">分享</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/zcmu-oj/" rel="tag">zcmu oj</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="-求x的n次幂" class="h-entry article article-type-" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/12/27/%E6%B1%82x%E7%9A%84n%E6%AC%A1%E5%B9%82/" class="article-date">
-  <time class="dt-published" datetime="2022-12-27T15:10:15.000Z" itemprop="datePublished">2022-12-27</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/12/27/%E6%B1%82x%E7%9A%84n%E6%AC%A1%E5%B9%82/">1076:求x的n次幂</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <hr>
-<p>#题目<br>Description</p>
-<blockquote>
-<p>输入一个正整数 repeat (0&lt;repeat&lt;10)，做repeat 次下列运算：<br>读入 1 个正实数x 和1 个正整数 n(n&lt;&#x3D;10)，计算并输出x 的n 次幂（保留2 位小数）。</p>
-</blockquote>
-<p>Sample Input</p>
-<blockquote>
-<p>2<br>1.5 2<br>2.0 10</p>
-</blockquote>
-<p>Sample Output</p>
-<blockquote>
-<p>2.25<br>1024.00</p>
-</blockquote>
-<hr>
-<pre><code>#include&lt;stdio.h&gt;
-main()
-&#123;
-double a,b;
-int repeat,n,i,l;
-scanf(&quot;%d&quot;,&amp;repeat);
-if(repeat&lt;10&amp;&amp;repeat&gt;0)
-    &#123;	
-    for(l=0;l&lt;repeat;l++)
-        &#123;			
-        scanf(&quot;%lf %d&quot;,&amp;a,&amp;n);
-            if(n&lt;=10)
-            &#123;
-            b=a;
-            for(i=1;i&lt;n;i++)
-                a=a*b;
-            printf(&quot;%.2lf\n&quot;,a);
-            &#125;
-        &#125;
-    &#125;	
-&#125;
-</code></pre>
-<p>小小累乘 可笑可笑</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/12/27/%E6%B1%82x%E7%9A%84n%E6%AC%A1%E5%B9%82/" data-id="clc6domyz000tu0600xhzbdt9" data-title="1076:求x的n次幂" class="article-share-link">分享</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/zcmu-oj/" rel="tag">zcmu oj</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="-求n" class="h-entry article article-type-" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/12/27/%E6%B1%82n/" class="article-date">
-  <time class="dt-published" datetime="2022-12-27T15:07:39.000Z" itemprop="datePublished">2022-12-27</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/12/27/%E6%B1%82n/">1075:求n!</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <hr>
-<p>#题目<br>Description</p>
-<blockquote>
-<p>输入一个正整数 repeat (0&lt;repeat&lt;10)，做repeat 次下列运算：<br>读入 1 个正整数 n (n&lt;&#x3D;22)，计算并输出 n! 。</p>
-</blockquote>
-<p>Sample Input</p>
-<blockquote>
-<p>3<br>1<br>10<br>5</p>
-</blockquote>
-<p>Sample Output</p>
-<blockquote>
-<p>1<br>3628800<br>120</p>
-</blockquote>
-<hr>
-<pre><code>#include&lt;stdio.h&gt;
-main()
-&#123;
-    int n,i,l,a;
-    double sum=1;
-    scanf(&quot;%d&quot;,&amp;a);
-    for(l=0;l&lt;a;l++)
-    &#123;
-        scanf(&quot;%d&quot;,&amp;n);
-        if(n&lt;=22)
-        &#123;
-            for(i=1;i&lt;=n;i++)
-                sum=sum*i;
-            printf(&quot;%.0lf\n&quot;,sum);
-            sum=1;
-        &#125; 
-    &#125;
-&#125;
-</code></pre>
-<p>累乘 必须累乘，虽然现在可以用递归</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/12/27/%E6%B1%82n/" data-id="clc6domyy000pu060f4ewh33u" data-title="1075:求n!" class="article-share-link">分享</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/zcmu-oj/" rel="tag">zcmu oj</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="-求1＋1-2＋1-3＋-＋1-n" class="h-entry article article-type-" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/12/27/%E6%B1%821%EF%BC%8B1-2%EF%BC%8B1-3%EF%BC%8B-%EF%BC%8B1-n/" class="article-date">
-  <time class="dt-published" datetime="2022-12-27T15:05:25.000Z" itemprop="datePublished">2022-12-27</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/12/27/%E6%B1%821%EF%BC%8B1-2%EF%BC%8B1-3%EF%BC%8B-%EF%BC%8B1-n/">1074:求1＋1/2＋1/3＋...＋1/n</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <hr>
-<p>#题目<br>Description</p>
-<blockquote>
-<p>输入一个正整数 repeat (0&lt;repeat&lt;10)，做repeat 次下列运算：<br>读入 1 个正整数 n(n&lt;&#x3D;50)，计算并输出1＋1&#x2F;2＋1&#x2F;3＋…＋1&#x2F;n (保留3 位小数)。</p>
-</blockquote>
-<p>Sample Input</p>
-<blockquote>
-<p>2<br>2<br>10</p>
-</blockquote>
-<p>Sample Output</p>
-<blockquote>
-<p>1.500<br>2.929</p>
-</blockquote>
-<hr>
-<pre><code>#include&lt;stdio.h&gt;
-main()
-&#123;
-int n,repeat,i,b;
-double sum;
-scanf(&quot;%d&quot;,&amp;repeat);
-        for(b=0;b&lt;repeat;b++)
-        &#123;
-            scanf(&quot;%d&quot;,&amp;n);
-            for(i=1;i&lt;=n;i++)
-            sum=sum+1.0/i;
-            printf(&quot;%.3lf\n&quot;,sum);
-            sum=0;  
-        &#125;
-&#125;
-</code></pre>
-<p>累加 必须累加</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/12/27/%E6%B1%821%EF%BC%8B1-2%EF%BC%8B1-3%EF%BC%8B-%EF%BC%8B1-n/" data-id="clc6domyw000hu060dxguf2sy" data-title="1074:求1＋1/2＋1/3＋...＋1/n" class="article-share-link">分享</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/zcmu-oj/" rel="tag">zcmu oj</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="-字母转换" class="h-entry article article-type-" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/12/27/%E5%AD%97%E6%AF%8D%E8%BD%AC%E6%8D%A2/" class="article-date">
-  <time class="dt-published" datetime="2022-12-27T15:03:41.000Z" itemprop="datePublished">2022-12-27</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/12/27/%E5%AD%97%E6%AF%8D%E8%BD%AC%E6%8D%A2/">1073:字母转换</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <hr>
-<p>#题目<br>Description</p>
-<blockquote>
-<p>输入一个正整数 repeat (0&lt;repeat&lt;10)，做repeat 次下列运算：<br>输入一个字符，如果它是大写字母，输出相应的小写字母；如果它是小写字母，输出相应的<br>大写字母；否则，原样输出。</p>
-</blockquote>
-<p>Sample Input</p>
-<blockquote>
-<p>3F&#x3D;y</p>
-</blockquote>
-<p>Sample Output</p>
-<blockquote>
-<p>f&#x3D;Y  </p>
-</blockquote>
-<hr>
-<pre><code>#include&lt;stdio.h&gt;
-main()
-&#123;
-char a[3];
-int repeat,i,l;
-scanf(&quot;%d&quot;,&amp;repeat);
-    for(l=0;l&lt;repeat;l++)
-    &#123;	
-        scanf(&quot;%s&quot;,&amp;a);
-        for(i=0;i&lt;=3;i++)
-        &#123;
-        if(a[i]&gt;=&#39;A&#39;&amp;&amp;a[i]&lt;=&#39;Z&#39;)
-            a[i]=a[i]+32;
-        else if(a[i]&gt;=&#39;a&#39;&amp;&amp;a[i]&lt;=&#39;z&#39;)
-            a[i]=a[i]-32;
-        else 
-            a[i]=a[i];
-        &#125;
-        printf(&quot;%s&quot;,a);
-    &#125;
-&#125;
-</code></pre>
-<p>最后还是狼狈的用了数组</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/12/27/%E5%AD%97%E6%AF%8D%E8%BD%AC%E6%8D%A2/" data-id="clc6domys0005u060desq7l6i" data-title="1073:字母转换" class="article-share-link">分享</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/zcmu-oj/" rel="tag">zcmu oj</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="-显示水果的价格" class="h-entry article article-type-" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/12/27/%E6%98%BE%E7%A4%BA%E6%B0%B4%E6%9E%9C%E7%9A%84%E4%BB%B7%E6%A0%BC/" class="article-date">
-  <time class="dt-published" datetime="2022-12-27T15:00:38.000Z" itemprop="datePublished">2022-12-27</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/12/27/%E6%98%BE%E7%A4%BA%E6%B0%B4%E6%9E%9C%E7%9A%84%E4%BB%B7%E6%A0%BC/">1072:显示水果的价格</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <hr>
-<p>#题目<br>Description</p>
-<blockquote>
-<p>输入一个正整数 repeat (0&lt;repeat&lt;10)，做repeat 次下列运算：<br>以下 4 种水果的单价分别是3.00 元&#x2F;公斤，2.50 元&#x2F;公斤，4.10 元&#x2F;公斤，10.20 元&#x2F;公斤。<br>[1] apples<br>[2] pears<br>[3] oranges<br>[4] grapes<br>输入水果的编号，输出该水果的单价(保留2 位小数)。如果输入不正确的编号，显示单价为0.00。</p>
-</blockquote>
-<p>Sample Input</p>
-<blockquote>
-<p>1<br>3</p>
-</blockquote>
-<p>Sample Output</p>
-<blockquote>
-<p>price&#x3D;4.10</p>
-</blockquote>
-<hr>
-<pre><code>#include&lt;stdio.h&gt;
-main()
-&#123;
-int a,b,i;
-double price;
-scanf(&quot;%d&quot;,&amp;b);
-for(i=0;i&lt;b;i++)
-    &#123;
-    scanf(&quot;%d&quot;,&amp;a);
-    switch(a)
-        &#123;
-        case 1:printf(&quot;price=3.00\n&quot;);break;
-        case 2:printf(&quot;price=2.50\n&quot;);break;
-        case 3:printf(&quot;price=4.10\n&quot;);break;
-        case 4:printf(&quot;price=10.20\n&quot;);break;
-        default:printf(&quot;price=0.00\n&quot;);break;
-        &#125;
-    &#125;
-&#125;
-</code></pre>
-<p>用上switch case函数了，属实人上人</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/12/27/%E6%98%BE%E7%A4%BA%E6%B0%B4%E6%9E%9C%E7%9A%84%E4%BB%B7%E6%A0%BC/" data-id="clc6domyw000fu060515wgei4" data-title="1072:显示水果的价格" class="article-share-link">分享</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="-计算个人所得税" class="h-entry article article-type-" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/12/27/%E8%AE%A1%E7%AE%97%E4%B8%AA%E4%BA%BA%E6%89%80%E5%BE%97%E7%A8%8E/" class="article-date">
-  <time class="dt-published" datetime="2022-12-27T14:57:45.000Z" itemprop="datePublished">2022-12-27</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/12/27/%E8%AE%A1%E7%AE%97%E4%B8%AA%E4%BA%BA%E6%89%80%E5%BE%97%E7%A8%8E/">1071:计算个人所得税</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <hr>
-<p>#题目<br>Description</p>
-<blockquote>
-<p>输入一个正整数 repeat (0&lt;repeat&lt;10)，做repeat 次下列运算：<br>输入一个职工的月薪 salary，输出应交的个人所得税tax(保留2 位小数)。<br>tax &#x3D; rate * (salary-850)<br>当 salary &lt;&#x3D; 850 时，rate &#x3D; 0;<br>当 850 &lt; salary &lt;&#x3D; 1350 时，rate &#x3D; 5;<br>当 1350 &lt; salary &lt;&#x3D; 2850 时，rate &#x3D; 10;<br>当 2850 &lt; salary &lt;&#x3D; 5850 时，rate &#x3D; 15;<br>当 5850 &lt; salary 时，rate &#x3D; 20;</p>
-</blockquote>
-<p>Sample Input</p>
-<blockquote>
-<p>2<br>200<br>2000<br>Sample Output<br>tax&#x3D;0.00<br>tax&#x3D;115.00</p>
-</blockquote>
-<p>HINT</p>
-<blockquote>
-<p>当结果为0时，你的程序可能输出的是 -0.00，请判断为0时，使用printf(“tax&#x3D;0.00\n”);</p>
-</blockquote>
-<hr>
-<pre><code>#include&lt;stdio.h&gt;
-main()
-&#123;
-double tax;
-int b,rate,salary,i;
-scanf(&quot;%d&quot;,&amp;b);
-    for(i=0;i&lt;b;i++)
-    &#123;	
-        scanf(&quot;%d&quot;,&amp;salary);
-        if(salary&gt;5850)
-        &#123;
-            rate=20;
-        &#125;	
-        else if(salary&gt;2850)
-        &#123;
-            rate = 15;
-        &#125;
-        else if(salary&gt;1350)
-        &#123;
-            rate=10;
-        &#125;	
-        else if(salary&gt;850)
-        &#123;
-            rate=5;	
-        &#125;
-        else
-        &#123;
-            rate=0;
-        &#125;
-        tax=rate*(salary-850)*0.01;
-        if(tax==0)
-        &#123;
-            printf(&quot;tax=0.00\n&quot;);
-        &#125;		
-        else
-        &#123;
-            printf(&quot;tax=%.2lf\n&quot;,tax);
-        &#125;
-    &#125;	
-        return 0;
-&#125; 
-</code></pre>
-<p>用了好多个else if，感觉最容易忘记的地方就是else if实际上已经包含了上面条件的反向条件，经常忘掉</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/12/27/%E8%AE%A1%E7%AE%97%E4%B8%AA%E4%BA%BA%E6%89%80%E5%BE%97%E7%A8%8E/" data-id="clc6domyz000xu060bhv61978" data-title="1071:计算个人所得税" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2022/12/27/%E6%B1%821%EF%BC%8D1-2%EF%BC%8B1-3%EF%BC%8D1-4%EF%BC%8B/" data-id="clc7ljs6p000sbk60fvd4eemv" data-title="1077:求1－1/2＋1/3－1/4＋..." class="article-share-link">分享</a>
       
       
       
@@ -906,23 +1037,23 @@ scanf(&quot;%d&quot;,&amp;b);
       <ul>
         
           <li>
-            <a href="/2022/12/27/%E6%B1%82%E5%A5%87%E6%95%B0%E5%92%8C/">1081:求奇数和</a>
+            <a href="/2022/12/28/%E5%87%BA%E7%8E%B0%E6%AC%A1%E6%95%B0%E8%B6%85%E8%BF%87%E4%B8%80%E5%8D%8A%E7%9A%84%E6%95%B0/">5213:出现次数超过一半的数</a>
           </li>
         
           <li>
-            <a href="/2022/12/27/%E6%B1%821%EF%BC%8D1-3%EF%BC%8B1-5%EF%BC%8D1-7%EF%BC%8B/">1079:求1－1/3＋1/5－1/7＋...</a>
+            <a href="/2022/12/28/%E8%BE%93%E5%87%BA%E4%B8%80%E4%B8%AA%E6%95%B4%E6%95%B0%E7%9A%84%E5%90%84%E4%BD%8D%E6%95%B0%E5%AD%97/">1092:输出一个整数的各位数字</a>
           </li>
         
           <li>
-            <a href="/2022/12/27/%E6%B1%821%EF%BC%8B1-3%EF%BC%8B1-5%EF%BC%8B1-7%EF%BC%8B/">1078:求1＋1/3＋1/5＋1/7＋...</a>
+            <a href="/2022/12/28/%E5%88%A4%E6%96%AD%E4%B8%89%E8%A7%92%E5%BD%A2%E5%BD%A2%E7%8A%B6/">判断三角形形状</a>
           </li>
         
           <li>
-            <a href="/2022/12/27/%E6%B1%821%EF%BC%8D1-2%EF%BC%8B1-3%EF%BC%8D1-4%EF%BC%8B/">1077:求1－1/2＋1/3－1/4＋...</a>
+            <a href="/2022/12/28/%E6%B1%82%E4%BD%99/">求余</a>
           </li>
         
           <li>
-            <a href="/2022/12/27/%E6%B1%82x%E7%9A%84n%E6%AC%A1%E5%B9%82/">1076:求x的n次幂</a>
+            <a href="/2022/12/28/E-%E5%BD%93%E7%84%B6%E6%98%AF%E9%80%89%E6%8B%A9%E5%8E%9F%E8%B0%85%E4%BD%A0/">E.当然是选择原谅你</a>
           </li>
         
       </ul>

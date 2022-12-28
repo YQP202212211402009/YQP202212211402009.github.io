@@ -4,18 +4,19 @@
   <meta charset="utf-8">
   
   
-  <title>暑假作业 | y9的超级博客</title>
+  <title>判断三角形形状 | y9的超级博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="#来自录取通知书上的一个作业，题目的要求是写出现在日期与放假日期之间的时间    #include&lt;stdio.h&gt; main()&amp;#123; int fangjia,i&#x3D;0; int sj1,sj2,sj3,rizi1;  int fj1,fj2,fj3,rizi2; int sum1&#x3D;0,sum2&#x3D;0,bs; int yue[]&#x3D;&amp;#123;0,31,28,31,30,31,30,">
+  <meta name="description" content="#题目Description  读入三角形的三条边，进行如下的判断：如果输入值不合法，输出illegal triangle，表示三角形不合法如果输入值合法，两条较短边的平方和大于最长边的平方，则输出acute triangle，表示锐角三角形如果输入值合法，两条较短边的平方和等于最长边的平方，则输出right triangle，表示直角三角形如果输入值合法，两条较短边的平方和小于最长边的平方，则">
 <meta property="og:type" content="article">
-<meta property="og:title" content="暑假作业">
-<meta property="og:url" content="http://example.com/2022/12/27/%E6%9A%91%E5%81%87%E4%BD%9C%E4%B8%9A/index.html">
+<meta property="og:title" content="判断三角形形状">
+<meta property="og:url" content="http://example.com/2022/12/28/%E5%88%A4%E6%96%AD%E4%B8%89%E8%A7%92%E5%BD%A2%E5%BD%A2%E7%8A%B6/index.html">
 <meta property="og:site_name" content="y9的超级博客">
-<meta property="og:description" content="#来自录取通知书上的一个作业，题目的要求是写出现在日期与放假日期之间的时间    #include&lt;stdio.h&gt; main()&amp;#123; int fangjia,i&#x3D;0; int sj1,sj2,sj3,rizi1;  int fj1,fj2,fj3,rizi2; int sum1&#x3D;0,sum2&#x3D;0,bs; int yue[]&#x3D;&amp;#123;0,31,28,31,30,31,30,">
+<meta property="og:description" content="#题目Description  读入三角形的三条边，进行如下的判断：如果输入值不合法，输出illegal triangle，表示三角形不合法如果输入值合法，两条较短边的平方和大于最长边的平方，则输出acute triangle，表示锐角三角形如果输入值合法，两条较短边的平方和等于最长边的平方，则输出right triangle，表示直角三角形如果输入值合法，两条较短边的平方和小于最长边的平方，则">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-12-27T08:11:45.000Z">
-<meta property="article:modified_time" content="2022-12-27T09:18:43.399Z">
+<meta property="article:published_time" content="2022-12-28T11:43:38.000Z">
+<meta property="article:modified_time" content="2022-12-28T11:45:13.953Z">
 <meta property="article:author" content="y9">
+<meta property="article:tag" content="zcmu oj">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="y9的超级博客" type="application/atom+xml">
@@ -77,10 +78,10 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-暑假作业" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-判断三角形形状" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2022/12/27/%E6%9A%91%E5%81%87%E4%BD%9C%E4%B8%9A/" class="article-date">
-  <time class="dt-published" datetime="2022-12-27T08:11:45.000Z" itemprop="datePublished">2022-12-27</time>
+    <a href="/2022/12/28/%E5%88%A4%E6%96%AD%E4%B8%89%E8%A7%92%E5%BD%A2%E5%BD%A2%E7%8A%B6/" class="article-date">
+  <time class="dt-published" datetime="2022-12-28T11:43:38.000Z" itemprop="datePublished">2022-12-28</time>
 </a>
     
   </div>
@@ -91,7 +92,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      暑假作业
+      判断三角形形状
     </h1>
   
 
@@ -99,67 +100,105 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>#来自录取通知书上的一个作业，题目的要求是写出现在日期与放假日期之间的时间  </p>
+        <hr>
+<p>#题目<br>Description</p>
+<blockquote>
+<p>读入三角形的三条边，进行如下的判断：<br>如果输入值不合法，输出illegal triangle，表示三角形不合法<br>如果输入值合法，两条较短边的平方和大于最长边的平方，则输出acute triangle，表示锐角三角形<br>如果输入值合法，两条较短边的平方和等于最长边的平方，则输出right triangle，表示直角三角形<br>如果输入值合法，两条较短边的平方和小于最长边的平方，则输出obtuse triangle，表示钝角三角形<br>如果任意两条边的和 大于 第三边，那么输入的三角形就是合法的。</p>
+</blockquote>
+<p>Input</p>
+<blockquote>
+<p>读入三个整数 a,b,c(1 &lt;&#x3D; a,b,c &lt;&#x3D; 100)，表示三角形的三条边。</p>
+</blockquote>
+<p>Output</p>
+<blockquote>
+<p>根据情况输出illegal triangle、acute triangle、right triangle、obtuse triangle中的一种。</p>
+</blockquote>
+<p>Sample Input</p>
+<blockquote>
+<p>3 4 5</p>
+</blockquote>
+<p>Sample Output</p>
+<blockquote>
+<p>right triangle</p>
+</blockquote>
+<hr>
+<p>三个数也要排序，割鸡焉用牛刀啊！</p>
 <hr>
 <pre><code>#include&lt;stdio.h&gt;
-main()&#123;
-int fangjia,i=0;
-int sj1,sj2,sj3,rizi1; 
-int fj1,fj2,fj3,rizi2;
-int sum1=0,sum2=0,bs;
-int yue[]=&#123;0,31,28,31,30,31,30,31,31,30,31,30,31&#125;;
-printf(&quot;请输入当前日期：(格式xxxx-yy-zz) 如2008-1-2\n&quot;);
-scanf(&quot;%d-%d-%d&quot;,&amp;sj1,&amp;sj2,&amp;sj3);
-    while(i&lt;=sj2)&#123;
-        sum1=sum1+yue[i];
-        i++;
-    &#125;	
-    rizi1=sj1*365+sum1+sj3;
-    printf(&quot;请输入放假日期：(格式xxxx-yy-zz) 如2008-1-2\n&quot;);
-     scanf(&quot;%d-%d-%d&quot;,&amp;fj1,&amp;fj2,&amp;fj3);
-     i=0;
-     while(i&lt;=fj2)&#123;
-        sum2=sum2+yue[i];
-        i++;
-    &#125;		
-    rizi2=fj1*365+sum2+fj3;
-    bs=rizi2-rizi1;
-    if(bs&gt;0)
-        printf(&quot;距离快乐假期还有%d天\n&quot;,rizi2-rizi1);
+#include&lt;math.h&gt;
+main()
+&#123;
+    int a[3]=&#123;0&#125;;
+    int b,t,i,min;
+    for(i=0;i&lt;3;i++)
+    &#123;
+        scanf(&quot;%d&quot;,&amp;a[i]);
+    &#125;
+    for(i=0;i&lt;2;i++)
+    &#123;
+        min=i;
+        for(b=i+1;b&lt;3;b++)
+        &#123;
+            if(a[b]&lt;a[min])
+            &#123;
+                min=b;
+            &#125;
+        &#125;
+        t=a[i];
+        a[i]=a[min];
+        a[min]=t;
+    &#125;
+    if((a[0]+a[1]&gt;a[2]) || (a[1]+a[2]&gt;a[0]) || (a[0]+a[2]&gt;a[1]))
+    &#123;
+        if(pow(a[0],2)+pow(a[1],2)&gt;pow(a[2],2))
+        &#123;
+            printf(&quot;acute triangle\n&quot;);
+        &#125;
+        else if(pow(a[0],2)+pow(a[1],2)==pow(a[2],2))
+        &#123;
+            printf(&quot;right triangle\n&quot;);
+        &#125;
         else
-        printf(&quot;你这输的是甚么东西&quot;);
+        &#123;
+            printf(&quot;obtuse triangle\n&quot;);
+        &#125;
+    &#125;
+    else 
+    &#123;
+        printf(&quot;illegal triangle\n&quot;);
+    &#125;
     return 0;
-&#125; 
+&#125;
 </code></pre>
-<hr>
-<p>第一次写代码 还是非常生疏 调试了很多次.</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/12/27/%E6%9A%91%E5%81%87%E4%BD%9C%E4%B8%9A/" data-id="clc7ljs6o000pbk60d85e24fv" data-title="暑假作业" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2022/12/28/%E5%88%A4%E6%96%AD%E4%B8%89%E8%A7%92%E5%BD%A2%E5%BD%A2%E7%8A%B6/" data-id="clc7ljs6d0001bk600wsxa6qk" data-title="判断三角形形状" class="article-share-link">分享</a>
       
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/zcmu-oj/" rel="tag">zcmu oj</a></li></ul>
+
     </footer>
   </div>
   
     
 <nav id="article-nav">
   
-    <a href="/2022/12/27/%E6%B1%82%E4%B8%A4%E4%B8%AA%E6%95%B0%E7%9A%84%E5%92%8C%E4%B8%8E%E5%B7%AE/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2022/12/28/%E8%BE%93%E5%87%BA%E4%B8%80%E4%B8%AA%E6%95%B4%E6%95%B0%E7%9A%84%E5%90%84%E4%BD%8D%E6%95%B0%E5%AD%97/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">前一篇</strong>
       <div class="article-nav-title">
         
-          1061:求两个数的和与差
+          1092:输出一个整数的各位数字
         
       </div>
     </a>
   
   
-    <a href="/2022/12/27/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2022/12/28/%E6%B1%82%E4%BD%99/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">后一篇</strong>
-      <div class="article-nav-title">第一篇博客</div>
+      <div class="article-nav-title">求余</div>
     </a>
   
 </nav>

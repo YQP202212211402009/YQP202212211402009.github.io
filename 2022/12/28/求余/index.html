@@ -4,18 +4,19 @@
   <meta charset="utf-8">
   
   
-  <title>暑假作业 | y9的超级博客</title>
+  <title>求余 | y9的超级博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="#来自录取通知书上的一个作业，题目的要求是写出现在日期与放假日期之间的时间    #include&lt;stdio.h&gt; main()&amp;#123; int fangjia,i&#x3D;0; int sj1,sj2,sj3,rizi1;  int fj1,fj2,fj3,rizi2; int sum1&#x3D;0,sum2&#x3D;0,bs; int yue[]&#x3D;&amp;#123;0,31,28,31,30,31,30,">
+  <meta name="description" content="#题目Description  小学题目，给定除数和被除数，求余数  Input  多组测试数据,每组测试数据包含两个整数n,k(1&lt;&#x3D;n&lt;&#x3D;10^2000,1&lt;&#x3D;k&lt;&#x3D;1000)  Output?对于每组测试数据,输出n%k Sample Input  12 412 5  Sample Output  02   说是小学题目 哥们">
 <meta property="og:type" content="article">
-<meta property="og:title" content="暑假作业">
-<meta property="og:url" content="http://example.com/2022/12/27/%E6%9A%91%E5%81%87%E4%BD%9C%E4%B8%9A/index.html">
+<meta property="og:title" content="求余">
+<meta property="og:url" content="http://example.com/2022/12/28/%E6%B1%82%E4%BD%99/index.html">
 <meta property="og:site_name" content="y9的超级博客">
-<meta property="og:description" content="#来自录取通知书上的一个作业，题目的要求是写出现在日期与放假日期之间的时间    #include&lt;stdio.h&gt; main()&amp;#123; int fangjia,i&#x3D;0; int sj1,sj2,sj3,rizi1;  int fj1,fj2,fj3,rizi2; int sum1&#x3D;0,sum2&#x3D;0,bs; int yue[]&#x3D;&amp;#123;0,31,28,31,30,31,30,">
+<meta property="og:description" content="#题目Description  小学题目，给定除数和被除数，求余数  Input  多组测试数据,每组测试数据包含两个整数n,k(1&lt;&#x3D;n&lt;&#x3D;10^2000,1&lt;&#x3D;k&lt;&#x3D;1000)  Output?对于每组测试数据,输出n%k Sample Input  12 412 5  Sample Output  02   说是小学题目 哥们">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-12-27T08:11:45.000Z">
-<meta property="article:modified_time" content="2022-12-27T09:18:43.399Z">
+<meta property="article:published_time" content="2022-12-28T11:41:32.000Z">
+<meta property="article:modified_time" content="2022-12-28T11:43:10.287Z">
 <meta property="article:author" content="y9">
+<meta property="article:tag" content="zcmu oj">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="y9的超级博客" type="application/atom+xml">
@@ -77,10 +78,10 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-暑假作业" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-求余" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2022/12/27/%E6%9A%91%E5%81%87%E4%BD%9C%E4%B8%9A/" class="article-date">
-  <time class="dt-published" datetime="2022-12-27T08:11:45.000Z" itemprop="datePublished">2022-12-27</time>
+    <a href="/2022/12/28/%E6%B1%82%E4%BD%99/" class="article-date">
+  <time class="dt-published" datetime="2022-12-28T11:41:32.000Z" itemprop="datePublished">2022-12-28</time>
 </a>
     
   </div>
@@ -91,7 +92,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      暑假作业
+      求余
     </h1>
   
 
@@ -99,67 +100,75 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>#来自录取通知书上的一个作业，题目的要求是写出现在日期与放假日期之间的时间  </p>
+        <hr>
+<p>#题目<br>Description</p>
+<blockquote>
+<p>小学题目，给定除数和被除数，求余数</p>
+</blockquote>
+<p>Input</p>
+<blockquote>
+<p>多组测试数据,每组测试数据包含两个整数n,k(1&lt;&#x3D;n&lt;&#x3D;10^2000,1&lt;&#x3D;k&lt;&#x3D;1000)</p>
+</blockquote>
+<p>Output<br>?对于每组测试数据,输出n%k</p>
+<p>Sample Input</p>
+<blockquote>
+<p>12 4<br>12 5</p>
+</blockquote>
+<p>Sample Output</p>
+<blockquote>
+<p>0<br>2</p>
+</blockquote>
+<hr>
+<p>说是小学题目 哥们没写出来</p>
 <hr>
 <pre><code>#include&lt;stdio.h&gt;
-main()&#123;
-int fangjia,i=0;
-int sj1,sj2,sj3,rizi1; 
-int fj1,fj2,fj3,rizi2;
-int sum1=0,sum2=0,bs;
-int yue[]=&#123;0,31,28,31,30,31,30,31,31,30,31,30,31&#125;;
-printf(&quot;请输入当前日期：(格式xxxx-yy-zz) 如2008-1-2\n&quot;);
-scanf(&quot;%d-%d-%d&quot;,&amp;sj1,&amp;sj2,&amp;sj3);
-    while(i&lt;=sj2)&#123;
-        sum1=sum1+yue[i];
-        i++;
-    &#125;	
-    rizi1=sj1*365+sum1+sj3;
-    printf(&quot;请输入放假日期：(格式xxxx-yy-zz) 如2008-1-2\n&quot;);
-     scanf(&quot;%d-%d-%d&quot;,&amp;fj1,&amp;fj2,&amp;fj3);
-     i=0;
-     while(i&lt;=fj2)&#123;
-        sum2=sum2+yue[i];
-        i++;
-    &#125;		
-    rizi2=fj1*365+sum2+fj3;
-    bs=rizi2-rizi1;
-    if(bs&gt;0)
-        printf(&quot;距离快乐假期还有%d天\n&quot;,rizi2-rizi1);
-        else
-        printf(&quot;你这输的是甚么东西&quot;);
-    return 0;
-&#125; 
+#include&lt;string.h&gt;
+main()
+&#123;
+    int sum=0;
+    char a[2001];
+    int k,i;
+    scanf(&quot;%s %d&quot;,&amp;a,&amp;k);
+    sum=a[0]-&#39;0&#39;;
+    for(i=1;i&lt;strlen(a);i++)
+    &#123;
+        if(sum&lt;k)
+        &#123;
+            sum=sum*10+(a[i]-&#39;0&#39;);
+        &#125;
+    &#125;
+&#125;
 </code></pre>
-<hr>
-<p>第一次写代码 还是非常生疏 调试了很多次.</p>
+<p>这样子真的很简洁有力，就是想不到 </p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/12/27/%E6%9A%91%E5%81%87%E4%BD%9C%E4%B8%9A/" data-id="clc7ljs6o000pbk60d85e24fv" data-title="暑假作业" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2022/12/28/%E6%B1%82%E4%BD%99/" data-id="clc7ljs6r0014bk60f6ih3vj5" data-title="求余" class="article-share-link">分享</a>
       
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/zcmu-oj/" rel="tag">zcmu oj</a></li></ul>
+
     </footer>
   </div>
   
     
 <nav id="article-nav">
   
-    <a href="/2022/12/27/%E6%B1%82%E4%B8%A4%E4%B8%AA%E6%95%B0%E7%9A%84%E5%92%8C%E4%B8%8E%E5%B7%AE/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2022/12/28/%E5%88%A4%E6%96%AD%E4%B8%89%E8%A7%92%E5%BD%A2%E5%BD%A2%E7%8A%B6/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">前一篇</strong>
       <div class="article-nav-title">
         
-          1061:求两个数的和与差
+          判断三角形形状
         
       </div>
     </a>
   
   
-    <a href="/2022/12/27/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2022/12/28/E-%E5%BD%93%E7%84%B6%E6%98%AF%E9%80%89%E6%8B%A9%E5%8E%9F%E8%B0%85%E4%BD%A0/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">后一篇</strong>
-      <div class="article-nav-title">第一篇博客</div>
+      <div class="article-nav-title">E.当然是选择原谅你</div>
     </a>
   
 </nav>
